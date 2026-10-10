@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": "ultimatearmoury:raw_mushashite",
+  "result": {
+    "id": "ultimatearmoury:mushashite_ingot"
+  }
+}

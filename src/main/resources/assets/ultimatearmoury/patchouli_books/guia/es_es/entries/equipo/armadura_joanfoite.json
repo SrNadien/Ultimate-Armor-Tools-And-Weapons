@@ -1,0 +1,14 @@
+{
+  "name": "Armadura de Joanfoite",
+  "icon": "ultimatearmoury:joanfoite_remera",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 1,
+  "pages": [
+    { "type": "patchouli:text", "text": "El segundo tier. Cada pieza se mejora desde la pieza equivalente de Mushashite, agregando Lingote de Joanfoite y el Corazon De Los Fantasmas." },
+    { "type": "patchouli:text", "text": "$(b)Gorro + Remera$() juntos dan Respiracion Acuatica.$(br2)$(b)Gayumbos + Medias$() juntos dan Velocidad II.$(br2)Con el $(b)set completo$() los Piglins no te atacan, igual que con la armadura de oro, y los Creepers no te ven." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_gorro" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_remera" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_gayumbos" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_medias" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "ultimatearmoury:nadienite"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "ultimatearmoury:nadienite"
+      }
+    ]
+  }
+}

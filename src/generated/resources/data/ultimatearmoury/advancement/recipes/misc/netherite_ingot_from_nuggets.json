@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_netherite_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:netherite_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:netherite_ingot_from_nuggets"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_netherite_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:netherite_ingot_from_nuggets"
+    ]
+  }
+}

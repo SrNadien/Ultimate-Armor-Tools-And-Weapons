@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "type": "exdeorum:sieve",
+  "ingredient": "exdeorum:crushed_deepslate",
+  "mesh": "ultimatearmoury:unobtainium_mesh",
+  "result": {
+    "count": 1,
+    "id": "allthemodium:raw_unobtainium"
+  },
+  "result_amount": {
+    "type": "minecraft:binomial",
+    "n": 1.0,
+    "p": 0.06
+  }
+}

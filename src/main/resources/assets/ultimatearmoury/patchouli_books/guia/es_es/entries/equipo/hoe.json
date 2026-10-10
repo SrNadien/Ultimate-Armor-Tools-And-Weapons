@@ -1,0 +1,12 @@
+{
+  "name": "Azada",
+  "icon": "ultimatearmoury:nadienite_hoe",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 8,
+  "pages": [
+    { "type": "patchouli:text", "text": "Mantiene todas las funciones vanilla y suma Eficiencia y Fortuna permanentes." },
+    { "type": "patchouli:text", "text": "La de $(b)Mushashite$() se forja desde cero con su lingote, palos y el Corazon De Los Caidos.$(br2)Las de $(b)Joanfoite$() y $(b)Nadienite$() se mejoran desde la del tier anterior, poniendola en el centro." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_hoe", "recipe2": "ultimatearmoury:joanfoite_hoe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_hoe" }
+  ]
+}

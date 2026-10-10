@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mushashite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:mushashite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:mushashite_nugget_from_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mushashite_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:mushashite_nugget_from_ingot"
+    ]
+  }
+}

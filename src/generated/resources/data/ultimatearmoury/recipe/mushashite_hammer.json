@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "h": "ultimatearmoury:corazon_de_los_caidos",
+    "m": "#c:ingots/mushashite",
+    "p": "#ultimatearmoury:compat/exdeorum_netherite_hammer",
+    "s": "#c:rods/wooden"
+  },
+  "pattern": [
+    " mh",
+    " pm",
+    "s  "
+  ],
+  "result": {
+    "id": "ultimatearmoury:mushashite_hammer"
+  }
+}

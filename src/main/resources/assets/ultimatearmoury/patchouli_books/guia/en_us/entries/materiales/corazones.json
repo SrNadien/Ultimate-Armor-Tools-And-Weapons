@@ -1,0 +1,11 @@
+{
+  "name": "The Hearts",
+  "icon": "ultimatearmoury:corazon_de_la_elite",
+  "category": "ultimatearmoury:materiales",
+  "sortnum": 3,
+  "pages": [
+    { "type": "patchouli:text", "text": "Each tier is unlocked by a different heart. Without the right heart you cannot craft or upgrade any piece of that tier." },
+    { "type": "patchouli:text", "text": "$(b)Heart Of The Fallen$(): rarely dropped by Zombies and Skeletons, and much more often by Wither Skeletons.$(br2)$(b)Heart Of The Ghosts$(): dropped by Phantoms, Ghasts and Vexes." },
+    { "type": "patchouli:text", "text": "$(b)Heart Of The Elite$(): dropped by Elder Guardians half the time, and guaranteed from the Wither, the Warden and the Ender Dragon." }
+  ]
+}

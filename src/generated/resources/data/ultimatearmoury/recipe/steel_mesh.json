@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "#c:ingots/steel",
+    "P": "#ultimatearmoury:compat/exdeorum_iron_mesh",
+    "S": "#c:strings"
+  },
+  "pattern": [
+    "S#S",
+    "#P#",
+    "S#S"
+  ],
+  "result": {
+    "id": "ultimatearmoury:steel_mesh"
+  }
+}

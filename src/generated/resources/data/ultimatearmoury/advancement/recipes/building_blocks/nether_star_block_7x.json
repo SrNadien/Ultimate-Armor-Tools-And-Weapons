@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nether_star": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:nether_star_block_6x"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:nether_star_block_7x"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nether_star"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:nether_star_block_7x"
+    ]
+  }
+}

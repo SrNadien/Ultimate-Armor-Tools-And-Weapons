@@ -1,0 +1,14 @@
+{
+  "name": "Mushashite Armor",
+  "icon": "ultimatearmoury:mushashite_remera",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 0,
+  "pages": [
+    { "type": "patchouli:text", "text": "The first tier. Forged from scratch with Mushashite Ingots and the Heart Of The Fallen, with no previous armor needed." },
+    { "type": "patchouli:text", "text": "$(b)Cap + Shirt$() together grant Luck I.$(br2)$(b)Undies + Socks$() together grant half an extra heart.$(br2)Both pieces of a pair must be worn for the effect to apply." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_gorro" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_remera" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_gayumbos" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_medias" }
+  ]
+}

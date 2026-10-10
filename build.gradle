@@ -1,0 +1,219 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.gradle.userdev' version '7.1.38'
+}
+
+version =minecraft_version + "-" + mod_version + "-" + tag_lanzador
+group = mod_group_id
+
+base {
+    archivesName = mod_name 
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+runs {
+    configureEach {
+        workingDirectory project.file('run')
+        
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+        systemProperty 'forge.logging.console.level', 'debug'
+        
+        modSource sourceSets.main
+    }
+
+    client {
+        systemProperty 'forge.enabledGameTestNamespaces', mod_id
+        programArgument '--quickPlaySingleplayer'
+        programArgument 'New World'
+    }
+
+    server {
+        systemProperty 'forge.enabledGameTestNamespaces', mod_id
+        programArgument '--nogui'
+    }
+
+    gameTestServer {
+        systemProperty 'forge.enabledGameTestNamespaces', mod_id
+    }
+
+    clientData {
+        workingDirectory project.file('run-data')
+
+        programArguments.addAll '--mod', mod_id,
+                                '--all',
+                                '--uncached',
+                                '--output', file('src/generated/resources/').getAbsolutePath(),
+                                '--existing', file('src/main/resources/').getAbsolutePath()
+    }
+
+    serverData {
+        workingDirectory project.file('run-data')
+
+        programArguments.addAll '--mod', mod_id,
+                                '--all',
+                                '--uncached',
+                                '--output', file('src/generated/resources/').getAbsolutePath(),
+                                '--existing', file('src/main/resources/').getAbsolutePath()
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    mavenCentral()
+    
+    maven {
+        name = "Curse Maven"
+        url = "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        url = "https://maven.blamejared.com"
+    }
+    maven {
+        name = 'GeckoLib'
+        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+    maven {
+		name = "TerraformersMC"
+		url = "https://maven.terraformersmc.com/"
+	}
+    maven {
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
+     maven {
+        url = 'https://maven2.bai.lol'
+        content {
+            includeGroup 'lol.bai'
+            includeGroup 'mcp.mobius.waila'
+        }
+    }
+     maven { // TOP
+        name 'tterrag maven'
+        url "https://maven.tterrag.com/"
+    }
+    maven {
+        name 'Re Avaritia Maven'
+        url "https://maven.nova-committee.cn/#/releases"
+    }
+    maven { url "https://maven.shedaniel.me" }
+     maven {
+        name = 'ModKit'
+        url 'https://jitpack.io'
+        content {
+            includeGroup 'com.github.thedarkcolour'
+            // Required for KubeJS
+            includeGroup 'com.github.rtyley'
+        }
+    }
+}  
+
+dependencies {
+    implementation "net.neoforged:neoforge:${neo_version}"
+    
+    
+    //jei
+    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+
+    //jade
+    implementation "maven.modrinth:jade:${jade_version}"
+
+    //GeckoLib
+    implementation "com.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+
+    //Patchouli
+    implementation "vazkii.patchouli:patchouli-neoforge:${patchouli_version}"
+
+
+    //Ex Deorum
+    runtimeOnly "maven.modrinth:ex-deorum:${exdeorum_version}"
+
+    // ModKit (rama 26.1, requerido por el datagen de Ex Deorum)
+    implementation "com.github.thedarkcolour:ModKit:${modkit_version}"
+
+    //AllTheModium
+    runtimeOnly "curse.maven:allthemodium-${allthemodium_project_id}:${allthemodium_version}"
+    runtimeOnly "curse.maven:ato-${alltheores_project_id}:${alltheores_version}"
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+        minecraft_version: minecraft_version,
+        neo_version: neo_version,
+        loader_version_range: loader_version_range,
+        mod_id: mod_id,
+        mod_name: mod_name,
+        mod_named: mod_name,
+        mod_license: mod_license,
+        mod_version: mod_version,
+        mod_authors: mod_authors,
+        mod_description: mod_description,
+        jade_version: jade_version,
+        jei_version: jei_version,
+        avaritia_version_id: avaritia_version_id,
+        patchouli_version: patchouli_version,
+        geckolib_version: geckolib_version,
+    ]
+    
+    inputs.properties replaceProperties
+    
+    filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+            "Specification-Title"     : mod_name,
+            "Specification-Vendor"    : mod_authors,
+            "Specification-Version"   : "1",
+            "Implementation-Title"    : project.name,
+            "Implementation-Version"  : project.version,
+            "Implementation-Vendor"   : mod_authors,
+            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+sourceSets {
+    main {
+        resources {
+            exclude '.cache'
+        }
+    }
+}
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
+}

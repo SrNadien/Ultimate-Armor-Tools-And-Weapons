@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": [
+    "ultimatearmoury:nadienite_ore",
+    "ultimatearmoury:deepslate_nadienite_ore"
+  ],
+  "result": {
+    "id": "ultimatearmoury:nadienite_ingot"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    }
+  ],
+  "type": "exdeorum:sieve",
+  "ingredient": "exdeorum:crushed_deepslate",
+  "mesh": "ultimatearmoury:steel_mesh",
+  "result": {
+    "count": 1,
+    "id": "minecraft:raw_iron"
+  },
+  "result_amount": {
+    "type": "minecraft:binomial",
+    "n": 1.0,
+    "p": 0.2
+  }
+}

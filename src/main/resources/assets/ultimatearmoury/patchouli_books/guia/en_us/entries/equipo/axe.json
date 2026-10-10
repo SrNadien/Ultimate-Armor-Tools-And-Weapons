@@ -1,0 +1,12 @@
+{
+  "name": "Axe",
+  "icon": "ultimatearmoury:nadienite_axe",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 6,
+  "pages": [
+    { "type": "patchouli:text", "text": "Besides chopping, it breaks the opponent's shield now and then, like the vanilla axe. It also carries permanent Efficiency and Fortune." },
+    { "type": "patchouli:text", "text": "The $(b)Mushashite$() one is forged from scratch with its ingot, sticks and the Heart Of The Fallen.$(br2)The $(b)Joanfoite$() and $(b)Nadienite$() ones are upgraded from the previous tier, placing it in the center." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_axe", "recipe2": "ultimatearmoury:joanfoite_axe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_axe" }
+  ]
+}

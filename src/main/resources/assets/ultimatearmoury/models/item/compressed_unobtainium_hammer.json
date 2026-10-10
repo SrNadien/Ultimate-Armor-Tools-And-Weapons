@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "ultimatearmoury:item/compressed_unobtainium_hammer"
+  }
+}

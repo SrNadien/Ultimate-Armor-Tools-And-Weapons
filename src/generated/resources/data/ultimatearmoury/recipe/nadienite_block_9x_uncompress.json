@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "ultimatearmoury:nadienite_block_9x"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:nadienite_block_8x"
+  }
+}

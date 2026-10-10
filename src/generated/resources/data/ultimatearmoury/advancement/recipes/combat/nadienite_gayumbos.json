@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_joanfoite_gayumbos": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:joanfoite_gayumbos"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:nadienite_gayumbos"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_joanfoite_gayumbos"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:nadienite_gayumbos"
+    ]
+  }
+}

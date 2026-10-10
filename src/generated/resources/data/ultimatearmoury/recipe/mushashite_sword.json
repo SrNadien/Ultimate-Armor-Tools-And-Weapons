@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "ultimatearmoury:corazon_de_los_caidos",
+    "N": "ultimatearmoury:mushashite_ingot",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    " C ",
+    " N ",
+    " S "
+  ],
+  "result": {
+    "id": "ultimatearmoury:mushashite_sword"
+  }
+}

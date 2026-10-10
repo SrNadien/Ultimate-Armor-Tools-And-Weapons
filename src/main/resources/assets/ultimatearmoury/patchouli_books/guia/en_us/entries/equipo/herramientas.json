@@ -1,0 +1,12 @@
+{
+  "name": "Tools",
+  "icon": "ultimatearmoury:nadienite_pickaxe",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 3,
+  "pages": [
+    { "type": "patchouli:text", "text": "Each tier comes with a sword, pickaxe, axe, shovel and hoe. All of them are unbreakable and carry permanent Efficiency and Fortune that scale with the tier." },
+    { "type": "patchouli:text", "text": "$(b)Mushashite$(): Efficiency and Fortune IV.$(br)$(b)Joanfoite$(): Efficiency and Fortune VII.$(br)$(b)Nadienite$(): Efficiency and Fortune X.$(br2)Mushashite tools are forged from scratch; the other two are upgraded from the previous tier's tool." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_pickaxe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_pickaxe" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Armadura de Mushashite",
+  "icon": "ultimatearmoury:mushashite_remera",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 0,
+  "pages": [
+    { "type": "patchouli:text", "text": "El primer tier. Se forja desde cero con Lingote de Mushashite y el Corazon De Los Caidos, sin necesitar ninguna armadura previa." },
+    { "type": "patchouli:text", "text": "$(b)Gorro + Remera$() juntos dan Suerte I.$(br2)$(b)Gayumbos + Medias$() juntos dan medio corazon de vida extra.$(br2)Las dos piezas del par tienen que estar puestas para que el efecto aplique." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_gorro" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_remera" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_gayumbos" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_medias" }
+  ]
+}

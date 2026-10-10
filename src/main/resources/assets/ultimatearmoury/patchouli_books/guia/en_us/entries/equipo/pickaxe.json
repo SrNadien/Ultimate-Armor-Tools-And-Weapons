@@ -1,0 +1,12 @@
+{
+  "name": "Pickaxe",
+  "icon": "ultimatearmoury:nadienite_pickaxe",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 5,
+  "pages": [
+    { "type": "patchouli:text", "text": "Mines any block in the mod. Carries permanent Efficiency and Fortune, IV, VII and X depending on the tier, plus extra speed on top of the material's own." },
+    { "type": "patchouli:text", "text": "The $(b)Mushashite$() one is forged from scratch with its ingot, sticks and the Heart Of The Fallen.$(br2)The $(b)Joanfoite$() and $(b)Nadienite$() ones are upgraded from the previous tier, placing it in the center." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_pickaxe", "recipe2": "ultimatearmoury:joanfoite_pickaxe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_pickaxe" }
+  ]
+}

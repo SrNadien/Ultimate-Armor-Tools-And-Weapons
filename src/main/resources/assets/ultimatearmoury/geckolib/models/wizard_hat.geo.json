@@ -1,0 +1,34 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.wizard_hat",
+        "texture_width": 64,
+        "texture_height": 64,
+        "visible_bounds_width": 4,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [0, 2, 0]
+      },
+      "bones": [
+        { "name": "armorBody", "pivot": [0, 24, 0] },
+        { "name": "armorRightArm", "pivot": [0, 24, 0] },
+        { "name": "armorLeftArm", "pivot": [0, 24, 0] },
+        { "name": "armorRightLeg", "pivot": [0, 24, 0] },
+        { "name": "armorLeftLeg", "pivot": [0, 24, 0] },
+        { "name": "armorRightBoot", "pivot": [0, 24, 0] },
+        { "name": "armorLeftBoot", "pivot": [0, 24, 0] },
+        { "name": "armorHead", "pivot": [0, 24, 0] },
+        { "name": "hat_brim", "parent": "armorHead", "pivot": [0, 32, 0], "rotation": [0, 0, 0], "cubes": [{ "origin": [-7, 32, -7], "size": [14, 1, 14], "uv": [0, 0] }] },
+        { "name": "hat_1", "parent": "armorHead", "pivot": [0, 32, 0], "rotation": [-3, 0, 0], "cubes": [{ "origin": [-4, 32, -4], "size": [8, 2, 8], "uv": [0, 16] }] },
+        { "name": "hat_2", "parent": "hat_1", "pivot": [0, 34, 0], "rotation": [-7, 0, 0], "cubes": [{ "origin": [-3.5, 34, -3.5], "size": [7, 2, 7], "uv": [32, 16] }] },
+        { "name": "hat_3", "parent": "hat_2", "pivot": [0, 36, 0], "rotation": [-7, 0, 0], "cubes": [{ "origin": [-3, 36, -3], "size": [6, 2, 6], "uv": [0, 27] }] },
+        { "name": "hat_4", "parent": "hat_3", "pivot": [0, 38, 0], "rotation": [-7, 0, 0], "cubes": [{ "origin": [-2.5, 38, -2.5], "size": [5, 2, 5], "uv": [24, 27] }] },
+        { "name": "hat_5", "parent": "hat_4", "pivot": [0, 40, 0], "rotation": [-7, 0, 0], "cubes": [{ "origin": [-2, 40, -2], "size": [4, 2, 4], "uv": [44, 27] }] },
+        { "name": "hat_6", "parent": "hat_5", "pivot": [0, 42, 0], "rotation": [-7, 0, 0], "cubes": [{ "origin": [-1.5, 42, -1.5], "size": [3, 2, 3], "uv": [0, 36] }] },
+        { "name": "hat_7", "parent": "hat_6", "pivot": [0, 44, 0], "rotation": [-7, 0, 0], "cubes": [{ "origin": [-1, 44, -1], "size": [2, 2, 2], "uv": [12, 36] }] },
+        { "name": "hat_8", "parent": "hat_7", "pivot": [0, 46, 0], "rotation": [-7, 0, 0], "cubes": [{ "origin": [-0.5, 46, -0.5], "size": [1, 2, 1], "uv": [20, 36] }] }
+      ]
+    }
+  ]
+}

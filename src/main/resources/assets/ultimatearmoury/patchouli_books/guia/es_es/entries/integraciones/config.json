@@ -1,0 +1,10 @@
+{
+  "name": "Desactivar integraciones",
+  "icon": "minecraft:comparator",
+  "category": "ultimatearmoury:integraciones",
+  "sortnum": 2,
+  "pages": [
+    { "type": "patchouli:text", "text": "Todas las integraciones se pueden apagar sin desinstalar nada. El archivo esta en $(b)config/ultimatearmoury-common.toml$()." },
+    { "type": "patchouli:text", "text": "Bajo $(b)[integraciones]$() vas a encontrar una opcion por cada mod. Poniendola en $(b)false$() desaparecen sus items y sus recetas por completo, como si el mod no estuviera.$(br2)La de AllTheModium necesita que la de Ex Deorum tambien este activa." }
+  ]
+}

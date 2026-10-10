@@ -1,0 +1,14 @@
+{
+  "name": "Nadienite Armor",
+  "icon": "ultimatearmoury:nadienite_remera",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 2,
+  "pages": [
+    { "type": "patchouli:text", "text": "The top tier. Each piece is upgraded from the matching Joanfoite piece, adding Nadienite Ingots and the Heart Of The Elite." },
+    { "type": "patchouli:text", "text": "$(b)Cap$(): Night Vision.$(br)$(b)Shirt$(): Resistance III and creative flight.$(br)$(b)Undies$(): Jump Boost III.$(br)$(b)Socks$(): Speed III.$(br2)With the $(b)full set$() Piglins won't attack you, Creepers can't see you, Endermen can't teleport and Phantoms are friendly." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_gorro" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_remera" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_gayumbos" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_medias" }
+  ]
+}

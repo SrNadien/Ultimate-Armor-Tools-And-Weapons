@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": "ultimatearmoury:corazon_de_la_elite",
+    "N": "ultimatearmoury:nadienite_ingot",
+    "P": "ultimatearmoury:joanfoite_axe"
+  },
+  "pattern": [
+    " N ",
+    "NPN",
+    " C "
+  ],
+  "result": {
+    "id": "ultimatearmoury:nadienite_axe"
+  }
+}

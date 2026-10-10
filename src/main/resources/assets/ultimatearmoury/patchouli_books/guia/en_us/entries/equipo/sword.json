@@ -1,0 +1,12 @@
+{
+  "name": "Sword",
+  "icon": "ultimatearmoury:nadienite_sword",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 4,
+  "pages": [
+    { "type": "patchouli:text", "text": "Each tier's weapon. No attack cooldown and unbreakable; the only thing the tier changes is damage: 25, 65 and 105." },
+    { "type": "patchouli:text", "text": "The $(b)Mushashite$() one is forged from scratch with its ingot, sticks and the Heart Of The Fallen.$(br2)The $(b)Joanfoite$() and $(b)Nadienite$() ones are upgraded from the previous tier, placing it in the center." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_sword", "recipe2": "ultimatearmoury:joanfoite_sword" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_sword" }
+  ]
+}

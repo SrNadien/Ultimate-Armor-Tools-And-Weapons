@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_joanfoite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:raw_joanfoite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:joanfoite_ingot_blastfurnace"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_joanfoite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:joanfoite_ingot_blastfurnace"
+    ]
+  }
+}

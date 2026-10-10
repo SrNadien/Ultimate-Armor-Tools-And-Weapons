@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "ultimatearmoury:mushashite_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:mushashite_ingot"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mushashite_block_7x": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:mushashite_block_7x"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:mushashite_block_7x_uncompress"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mushashite_block_7x"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:mushashite_block_7x_uncompress"
+    ]
+  }
+}

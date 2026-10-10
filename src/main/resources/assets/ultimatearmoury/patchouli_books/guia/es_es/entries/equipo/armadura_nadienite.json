@@ -1,0 +1,14 @@
+{
+  "name": "Armadura de Nadienite",
+  "icon": "ultimatearmoury:nadienite_remera",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 2,
+  "pages": [
+    { "type": "patchouli:text", "text": "El tier tope. Cada pieza se mejora desde la pieza equivalente de Joanfoite, agregando Lingote de Nadienite y el Corazon De La Elite." },
+    { "type": "patchouli:text", "text": "$(b)Gorro$(): Vision Nocturna.$(br)$(b)Remera$(): Resistencia III y vuelo.$(br)$(b)Gayumbos$(): Salto III.$(br)$(b)Medias$(): Velocidad III.$(br2)Con el $(b)set completo$() los Piglins no te atacan, los Creepers no te ven, los Endermen no pueden teletransportarse y los Phantoms son amigables." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_gorro" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_remera" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_gayumbos" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_medias" }
+  ]
+}

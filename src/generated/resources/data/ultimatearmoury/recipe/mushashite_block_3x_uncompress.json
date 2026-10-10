@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "ultimatearmoury:mushashite_block_3x"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:mushashite_block_2x"
+  }
+}

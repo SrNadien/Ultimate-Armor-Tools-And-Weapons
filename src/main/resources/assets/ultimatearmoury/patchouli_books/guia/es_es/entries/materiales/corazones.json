@@ -1,0 +1,11 @@
+{
+  "name": "Los Corazones",
+  "icon": "ultimatearmoury:corazon_de_la_elite",
+  "category": "ultimatearmoury:materiales",
+  "sortnum": 3,
+  "pages": [
+    { "type": "patchouli:text", "text": "Cada tier se abre con un corazon distinto. Sin el corazon correcto no podes fabricar ni mejorar ninguna pieza de ese tier." },
+    { "type": "patchouli:text", "text": "$(b)Corazon De Los Caidos$(): lo sueltan Zombis y Esqueletos con poca probabilidad, y los Esqueletos Wither bastante mas seguido.$(br2)$(b)Corazon De Los Fantasmas$(): lo sueltan Phantoms, Ghasts y Vexes." },
+    { "type": "patchouli:text", "text": "$(b)Corazon De La Elite$(): lo sueltan los Guardianes Ancianos la mitad de las veces, y de forma garantizada el Wither, el Warden y el Dragon del End." }
+  ]
+}

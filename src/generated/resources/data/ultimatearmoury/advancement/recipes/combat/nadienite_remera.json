@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_joanfoite_remera": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:joanfoite_remera"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:nadienite_remera"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_joanfoite_remera"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:nadienite_remera"
+    ]
+  }
+}

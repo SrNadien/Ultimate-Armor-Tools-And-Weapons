@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    }
+  ],
+  "type": "exdeorum:sieve",
+  "ingredient": "minecraft:gravel",
+  "mesh": "ultimatearmoury:joanfoite_mesh",
+  "result": {
+    "count": 1,
+    "id": "minecraft:ancient_debris"
+  },
+  "result_amount": {
+    "type": "minecraft:binomial",
+    "n": 1.0,
+    "p": 0.02
+  }
+}

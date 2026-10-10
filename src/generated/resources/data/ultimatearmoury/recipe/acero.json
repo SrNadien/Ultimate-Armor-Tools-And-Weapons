@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": "minecraft:iron_ingot",
+    "b": "minecraft:coal"
+  },
+  "pattern": [
+    "aa ",
+    "bb ",
+    "   "
+  ],
+  "result": {
+    "id": "ultimatearmoury:steel_ingot"
+  }
+}

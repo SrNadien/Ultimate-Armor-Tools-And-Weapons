@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nadienite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:nadienite_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:chancleta"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nadienite_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:chancleta"
+    ]
+  }
+}

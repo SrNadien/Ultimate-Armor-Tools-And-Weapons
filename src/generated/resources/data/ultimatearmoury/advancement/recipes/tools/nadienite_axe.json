@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_joanfoite_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:joanfoite_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:nadienite_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_joanfoite_axe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:nadienite_axe"
+    ]
+  }
+}

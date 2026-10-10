@@ -1,0 +1,50 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:compressed_vibranium_hammer"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vibranium_hammer": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:vibranium_hammer"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vibranium_hammer"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:compressed_vibranium_hammer"
+    ]
+  }
+}

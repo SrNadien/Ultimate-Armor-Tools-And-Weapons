@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mushashite_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:mushashite_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:joanfoite_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_mushashite_axe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:joanfoite_axe"
+    ]
+  }
+}

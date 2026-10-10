@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "ultimatearmoury:joanfoite"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "ultimatearmoury:joanfoite"
+      }
+    ]
+  }
+}

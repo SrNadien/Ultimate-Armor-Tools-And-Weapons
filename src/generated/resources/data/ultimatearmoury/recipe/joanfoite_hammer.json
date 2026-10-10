@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "h": "ultimatearmoury:corazon_de_los_fantasmas",
+    "m": "#c:ingots/joanfoite",
+    "p": "ultimatearmoury:mushashite_hammer",
+    "s": "#c:rods/wooden"
+  },
+  "pattern": [
+    " mh",
+    " pm",
+    "s  "
+  ],
+  "result": {
+    "id": "ultimatearmoury:joanfoite_hammer"
+  }
+}

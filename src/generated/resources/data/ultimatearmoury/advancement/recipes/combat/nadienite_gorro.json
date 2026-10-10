@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_joanfoite_gorro": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:joanfoite_gorro"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:nadienite_gorro"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_joanfoite_gorro"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:nadienite_gorro"
+    ]
+  }
+}

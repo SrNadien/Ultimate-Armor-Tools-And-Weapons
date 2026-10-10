@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "ultimatearmoury:mushashite"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "ultimatearmoury:mushashite"
+      }
+    ]
+  }
+}

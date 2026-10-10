@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "ultimatearmoury:nadienite_ingot"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:nadienite_nugget"
+  }
+}

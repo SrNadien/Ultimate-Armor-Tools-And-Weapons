@@ -1,0 +1,12 @@
+{
+  "name": "AllTheModium",
+  "icon": "ultimatearmoury:allthemodium_mesh",
+  "category": "ultimatearmoury:integraciones",
+  "sortnum": 1,
+  "pages": [
+    { "type": "patchouli:text", "text": "Si ademas de Ex Deorum tenes AllTheModium, se agregan tres mallas mas que continuan la cadena por encima de la de Nadienite." },
+    { "type": "patchouli:text", "text": "$(b)Allthemodium$(), $(b)Vibranium$() y $(b)Unobtainium$(), en ese orden. Cada una sigue saliendo de la anterior y suelta el material en bruto del mod, ademas de Nadienite." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:allthemodium_mesh", "recipe2": "ultimatearmoury:vibranium_mesh" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:unobtainium_mesh" }
+  ]
+}
