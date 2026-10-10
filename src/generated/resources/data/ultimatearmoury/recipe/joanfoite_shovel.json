@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "ultimatearmoury:corazon_de_los_fantasmas"
+    },
+    "N": {
+      "item": "ultimatearmoury:joanfoite_ingot"
+    },
+    "P": {
+      "item": "ultimatearmoury:mushashite_shovel"
+    }
+  },
+  "pattern": [
+    " N ",
+    "NPN",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:joanfoite_shovel"
+  }
+}

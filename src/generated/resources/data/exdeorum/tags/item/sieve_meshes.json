@@ -1,0 +1,32 @@
+{
+  "values": [
+    {
+      "id": "ultimatearmoury:steel_mesh",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:mushashite_mesh",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:joanfoite_mesh",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:nadienite_mesh",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:allthemodium_mesh",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:vibranium_mesh",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:unobtainium_mesh",
+      "required": false
+    }
+  ]
+}

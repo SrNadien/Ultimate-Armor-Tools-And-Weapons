@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "ultimatearmoury:corazon_de_los_caidos"
+    },
+    "N": {
+      "item": "ultimatearmoury:mushashite_ingot"
+    }
+  },
+  "pattern": [
+    "NCN",
+    "N N",
+    "N N"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:mushashite_gayumbos"
+  }
+}

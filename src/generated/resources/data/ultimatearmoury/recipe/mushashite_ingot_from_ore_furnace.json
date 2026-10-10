@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": [
+    {
+      "item": "ultimatearmoury:mushashite_ore"
+    },
+    {
+      "item": "ultimatearmoury:deepslate_mushashite_ore"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:mushashite_ingot"
+  }
+}

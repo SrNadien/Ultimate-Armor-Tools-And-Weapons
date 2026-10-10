@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    }
+  ],
+  "type": "exdeorum:compressed_sieve",
+  "ingredient": {
+    "tag": "exdeorum:compressed/crushed_deepslate"
+  },
+  "mesh": {
+    "item": "ultimatearmoury:nadienite_mesh"
+  },
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:raw_nadienite"
+  },
+  "result_amount": {
+    "type": "minecraft:binomial",
+    "n": 7.0,
+    "p": 0.08
+  }
+}

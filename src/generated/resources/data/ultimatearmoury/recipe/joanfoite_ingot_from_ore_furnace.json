@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredient": [
+    {
+      "item": "ultimatearmoury:joanfoite_ore"
+    },
+    {
+      "item": "ultimatearmoury:deepslate_joanfoite_ore"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:joanfoite_ingot"
+  }
+}

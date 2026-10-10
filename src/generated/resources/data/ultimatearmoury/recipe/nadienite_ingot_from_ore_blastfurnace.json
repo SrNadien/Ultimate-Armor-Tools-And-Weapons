@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredient": [
+    {
+      "item": "ultimatearmoury:nadienite_ore"
+    },
+    {
+      "item": "ultimatearmoury:deepslate_nadienite_ore"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:nadienite_ingot"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "#ultimatearmoury:enchantable/autosmelt_mining",
+    "#ultimatearmoury:enchantable/autosmelt_axe",
+    "#ultimatearmoury:enchantable/autosmelt_axes",
+    "#ultimatearmoury:enchantable/autosmelt_shovels",
+    "#ultimatearmoury:enchantable/autosmelt_pickaxes"
+  ]
+}

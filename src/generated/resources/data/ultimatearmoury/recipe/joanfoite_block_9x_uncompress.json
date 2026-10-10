@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "ultimatearmoury:joanfoite_block_9x"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:joanfoite_block_8x"
+  }
+}

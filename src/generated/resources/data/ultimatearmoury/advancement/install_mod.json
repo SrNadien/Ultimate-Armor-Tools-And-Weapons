@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancements.ultimatearmoury.install_mod.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "ultimatearmoury:nadienite_block"
+    },
+    "title": {
+      "translate": "advancements.ultimatearmoury.install_mod.title"
+    }
+  },
+  "requirements": [
+    [
+      "tick"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

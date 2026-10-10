@@ -1,0 +1,12 @@
+{
+  "name": "Nadienite",
+  "icon": "ultimatearmoury:nadienite_ingot",
+  "category": "ultimatearmoury:materiales",
+  "sortnum": 2,
+  "pages": [
+    { "type": "patchouli:text", "text": "El material del tier tope, de color verde lima. Es el mas dificil de encontrar: solo aparece entre la altura Y -64 e Y -8, en vetas de hasta 4 bloques." },
+    { "type": "patchouli:text", "text": "Ademas de la mena, el Nadienite tiene su propio fluido y aparece en el mundo como parte de la generacion del mod." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_block_recipe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_ingot_from_nuggets" }
+  ]
+}

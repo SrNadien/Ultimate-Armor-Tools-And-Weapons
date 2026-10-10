@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "ultimatearmoury:corazon_de_la_elite"
+    },
+    "N": {
+      "item": "ultimatearmoury:nadienite_ingot"
+    },
+    "P": {
+      "item": "ultimatearmoury:joanfoite_shovel"
+    }
+  },
+  "pattern": [
+    " N ",
+    "NPN",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:nadienite_shovel"
+  }
+}

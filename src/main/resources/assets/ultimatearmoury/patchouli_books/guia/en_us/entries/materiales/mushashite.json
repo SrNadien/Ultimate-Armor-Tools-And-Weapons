@@ -1,0 +1,12 @@
+{
+  "name": "Mushashite",
+  "icon": "ultimatearmoury:mushashite_ingot",
+  "category": "ultimatearmoury:materiales",
+  "sortnum": 0,
+  "pages": [
+    { "type": "patchouli:text", "text": "The first tier material, light blue. Its ore is the most common of the three and spawns between Y -48 and Y 48, in veins of up to 9 blocks." },
+    { "type": "patchouli:text", "text": "Mining the ore drops Raw Mushashite, and Fortune multiplies the drop. Smelt it in any furnace to get the ingot. With Silk Touch the ore block drops instead." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_block_recipe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_ingot_from_nuggets" }
+  ]
+}

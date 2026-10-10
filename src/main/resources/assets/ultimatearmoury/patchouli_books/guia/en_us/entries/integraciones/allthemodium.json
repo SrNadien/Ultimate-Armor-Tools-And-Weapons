@@ -1,0 +1,12 @@
+{
+  "name": "AllTheModium",
+  "icon": "ultimatearmoury:allthemodium_mesh",
+  "category": "ultimatearmoury:integraciones",
+  "sortnum": 1,
+  "pages": [
+    { "type": "patchouli:text", "text": "If you have AllTheModium on top of Ex Deorum, three more meshes are added that continue the chain above the Nadienite one." },
+    { "type": "patchouli:text", "text": "$(b)Allthemodium$(), $(b)Vibranium$() and $(b)Unobtainium$(), in that order. Each one still comes from the previous, and drops that mod's raw material plus Nadienite." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:allthemodium_mesh", "recipe2": "ultimatearmoury:vibranium_mesh" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:unobtainium_mesh" }
+  ]
+}

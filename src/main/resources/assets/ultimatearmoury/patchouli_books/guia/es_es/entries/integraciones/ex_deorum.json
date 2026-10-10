@@ -1,0 +1,14 @@
+{
+  "name": "Ex Deorum",
+  "icon": "ultimatearmoury:nadienite_mesh",
+  "category": "ultimatearmoury:integraciones",
+  "sortnum": 0,
+  "pages": [
+    { "type": "patchouli:text", "text": "Con Ex Deorum instalado el mod agrega siete mallas de tamiz, pensadas para poder conseguir los materiales sin picar una sola mena. Sirve para skyblock." },
+    { "type": "patchouli:text", "text": "El orden es: $(b)Acero$() por encima de la de hierro, y despues de la de netherita vienen $(b)Mushashite$(), $(b)Joanfoite$() y $(b)Nadienite$().$(br2)Cada malla se fabrica poniendo la del tier anterior en el centro, rodeada de lingotes del material nuevo y cuerda en las esquinas." },
+    { "type": "patchouli:text", "text": "La cadena arranca sola: la $(b)malla de netherita$() de Ex Deorum ya suelta Mushashite en bruto, y la de diamante tambien aunque menos seguido. De ahi cada malla nuestra suelta el material de la siguiente.$(br2)Funcionan sobre grava, arena, pizarra triturada y netherrack triturado, tanto en el tamiz normal como en el comprimido." },
+    { "type": "patchouli:text", "text": "Ademas, los bloques de $(b)Mushashite$(), $(b)Joanfoite$() y $(b)Nadienite$() sirven como fuente de calor para el crisol, con valores 2, 3 y 4. El de Nadienite calienta mas que la lava." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:steel_mesh", "recipe2": "ultimatearmoury:mushashite_mesh" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_mesh", "recipe2": "ultimatearmoury:nadienite_mesh" }
+  ]
+}

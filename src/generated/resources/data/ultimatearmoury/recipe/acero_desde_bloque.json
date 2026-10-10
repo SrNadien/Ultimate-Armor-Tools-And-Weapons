@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "ultimatearmoury:steel_block"
+    }
+  },
+  "pattern": [
+    "a  ",
+    "   ",
+    "   "
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:steel_ingot"
+  }
+}

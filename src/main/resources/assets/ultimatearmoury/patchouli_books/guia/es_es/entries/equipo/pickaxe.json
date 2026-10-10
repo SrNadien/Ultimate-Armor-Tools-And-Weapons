@@ -1,0 +1,12 @@
+{
+  "name": "Pico",
+  "icon": "ultimatearmoury:nadienite_pickaxe",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 5,
+  "pages": [
+    { "type": "patchouli:text", "text": "Pica cualquier bloque del mod. Lleva Eficiencia y Fortuna permanentes, IV, VII y X segun el tier, y suma velocidad extra por encima de la del material." },
+    { "type": "patchouli:text", "text": "La de $(b)Mushashite$() se forja desde cero con su lingote, palos y el Corazon De Los Caidos.$(br2)Las de $(b)Joanfoite$() y $(b)Nadienite$() se mejoran desde la del tier anterior, poniendola en el centro." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_pickaxe", "recipe2": "ultimatearmoury:joanfoite_pickaxe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_pickaxe" }
+  ]
+}

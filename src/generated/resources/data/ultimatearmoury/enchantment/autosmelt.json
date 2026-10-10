@@ -1,0 +1,21 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.ultimatearmoury.autosmelt"
+  },
+  "exclusive_set": "minecraft:silk_touch",
+  "max_cost": {
+    "base": 60,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#ultimatearmoury:enchantable/autosmelt",
+  "weight": 2
+}

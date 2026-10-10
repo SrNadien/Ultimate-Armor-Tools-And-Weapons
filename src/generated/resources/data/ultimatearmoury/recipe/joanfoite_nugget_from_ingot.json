@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ultimatearmoury:joanfoite_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:joanfoite_nugget"
+  }
+}

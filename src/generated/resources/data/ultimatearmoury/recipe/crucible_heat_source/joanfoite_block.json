@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "exDeorum"
+    }
+  ],
+  "type": "exdeorum:crucible_heat_source",
+  "block_predicate": {
+    "block": "ultimatearmoury:joanfoite_block"
+  },
+  "heat_value": 3
+}

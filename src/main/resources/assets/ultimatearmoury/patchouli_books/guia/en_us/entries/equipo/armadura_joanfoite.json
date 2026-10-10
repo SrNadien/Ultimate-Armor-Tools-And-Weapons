@@ -1,0 +1,14 @@
+{
+  "name": "Joanfoite Armor",
+  "icon": "ultimatearmoury:joanfoite_remera",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 1,
+  "pages": [
+    { "type": "patchouli:text", "text": "The second tier. Each piece is upgraded from the matching Mushashite piece, adding Joanfoite Ingots and the Heart Of The Ghosts." },
+    { "type": "patchouli:text", "text": "$(b)Cap + Shirt$() together grant Water Breathing.$(br2)$(b)Undies + Socks$() together grant Speed II.$(br2)With the $(b)full set$() Piglins won't attack you, just like with gold armor, and Creepers can't see you." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_gorro" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_remera" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_gayumbos" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_medias" }
+  ]
+}

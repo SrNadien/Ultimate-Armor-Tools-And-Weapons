@@ -1,0 +1,10 @@
+{
+  "name": "Turning integrations off",
+  "icon": "minecraft:comparator",
+  "category": "ultimatearmoury:integraciones",
+  "sortnum": 2,
+  "pages": [
+    { "type": "patchouli:text", "text": "Every integration can be turned off without uninstalling anything. The file is at $(b)config/ultimatearmoury-common.toml$()." },
+    { "type": "patchouli:text", "text": "Under $(b)[integraciones]$() there is one option per mod. Setting it to $(b)false$() removes its items and recipes entirely, as if the mod were not there.$(br2)The AllTheModium one needs the Ex Deorum one to be active as well." }
+  ]
+}

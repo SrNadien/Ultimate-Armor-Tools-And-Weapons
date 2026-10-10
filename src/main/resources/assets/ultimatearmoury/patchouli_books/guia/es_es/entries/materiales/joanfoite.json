@@ -1,0 +1,12 @@
+{
+  "name": "Joanfoite",
+  "icon": "ultimatearmoury:joanfoite_ingot",
+  "category": "ultimatearmoury:materiales",
+  "sortnum": 1,
+  "pages": [
+    { "type": "patchouli:text", "text": "El material del segundo tier, de color morado. Su mena es bastante mas rara que la de Mushashite y solo aparece entre la altura Y -64 e Y 16, en vetas de hasta 6 bloques." },
+    { "type": "patchouli:text", "text": "Funciona igual que el resto: la mena suelta Joanfoite En Bruto con Fortuna aplicada, y el bruto se funde en lingote." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_block_recipe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_ingot_from_nuggets" }
+  ]
+}

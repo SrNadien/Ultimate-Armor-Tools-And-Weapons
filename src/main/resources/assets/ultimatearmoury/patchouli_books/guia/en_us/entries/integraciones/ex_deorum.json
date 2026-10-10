@@ -1,0 +1,14 @@
+{
+  "name": "Ex Deorum",
+  "icon": "ultimatearmoury:nadienite_mesh",
+  "category": "ultimatearmoury:integraciones",
+  "sortnum": 0,
+  "pages": [
+    { "type": "patchouli:text", "text": "With Ex Deorum installed the mod adds seven sieve meshes, so you can get the materials without mining a single ore. Made for skyblock." },
+    { "type": "patchouli:text", "text": "The order is: $(b)Steel$() above the iron one, and after the netherite one come $(b)Mushashite$(), $(b)Joanfoite$() and $(b)Nadienite$().$(br2)Each mesh is crafted by putting the previous tier in the center, surrounded by ingots of the new material and string in the corners." },
+    { "type": "patchouli:text", "text": "The chain bootstraps itself: Ex Deorum's $(b)netherite mesh$() already drops Raw Mushashite, and the diamond one does too, just less often. From there each of our meshes drops the next material.$(br2)They work on gravel, sand, crushed deepslate and crushed netherrack, in both the normal and the compressed sieve." },
+    { "type": "patchouli:text", "text": "On top of that, the $(b)Mushashite$(), $(b)Joanfoite$() and $(b)Nadienite$() blocks work as crucible heat sources, with values 2, 3 and 4. The Nadienite one is hotter than lava." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:steel_mesh", "recipe2": "ultimatearmoury:mushashite_mesh" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:joanfoite_mesh", "recipe2": "ultimatearmoury:nadienite_mesh" }
+  ]
+}

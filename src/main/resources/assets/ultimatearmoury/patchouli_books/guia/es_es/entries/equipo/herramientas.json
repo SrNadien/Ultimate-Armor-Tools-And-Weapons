@@ -1,0 +1,12 @@
+{
+  "name": "Herramientas",
+  "icon": "ultimatearmoury:nadienite_pickaxe",
+  "category": "ultimatearmoury:equipo",
+  "sortnum": 3,
+  "pages": [
+    { "type": "patchouli:text", "text": "Cada tier trae espada, pico, hacha, pala y azada. Todas son irrompibles y llevan Eficiencia y Fortuna permanentes, que suben con el tier." },
+    { "type": "patchouli:text", "text": "$(b)Mushashite$(): Eficiencia y Fortuna IV.$(br)$(b)Joanfoite$(): Eficiencia y Fortuna VII.$(br)$(b)Nadienite$(): Eficiencia y Fortuna X.$(br2)Las de Mushashite se forjan desde cero; las otras dos se mejoran desde la herramienta del tier anterior." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_pickaxe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_pickaxe" }
+  ]
+}

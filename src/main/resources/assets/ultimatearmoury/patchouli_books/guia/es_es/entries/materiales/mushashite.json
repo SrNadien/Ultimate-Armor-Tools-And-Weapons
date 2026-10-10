@@ -1,0 +1,12 @@
+{
+  "name": "Mushashite",
+  "icon": "ultimatearmoury:mushashite_ingot",
+  "category": "ultimatearmoury:materiales",
+  "sortnum": 0,
+  "pages": [
+    { "type": "patchouli:text", "text": "El material del primer tier, de color celeste. Su mena es la mas comun de las tres y aparece entre la altura Y -48 e Y 48, en vetas de hasta 9 bloques." },
+    { "type": "patchouli:text", "text": "Al picar la mena suelta Mushashite En Bruto, y la Fortuna multiplica el drop. Fundilo en cualquier horno para obtener el lingote. Con Toque de Seda cae el bloque de mena entero." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_block_recipe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:mushashite_ingot_from_nuggets" }
+  ]
+}

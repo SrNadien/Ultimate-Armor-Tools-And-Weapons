@@ -1,0 +1,12 @@
+{
+  "name": "Nadienite",
+  "icon": "ultimatearmoury:nadienite_ingot",
+  "category": "ultimatearmoury:materiales",
+  "sortnum": 2,
+  "pages": [
+    { "type": "patchouli:text", "text": "The top tier material, lime green. It is the hardest to find: it only spawns between Y -64 and Y -8, in veins of up to 4 blocks." },
+    { "type": "patchouli:text", "text": "Besides the ore, Nadienite has its own fluid and shows up in the world as part of the mod's generation." },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_block_recipe" },
+    { "type": "patchouli:crafting", "recipe": "ultimatearmoury:nadienite_ingot_from_nuggets" }
+  ]
+}

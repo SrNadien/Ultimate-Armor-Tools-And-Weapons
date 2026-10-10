@@ -1,0 +1,8 @@
+{
+  "name": "book.ultimatearmoury.guia",
+  "landing_text": "book.ultimatearmoury.guia.landing",
+  "version": 1,
+  "model": "ultimatearmoury:guia",
+  "creative_tab": "ultimatearmoury:ultimate_foods_tab",
+  "use_resource_pack": true
+}

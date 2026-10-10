@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "ultimatearmoury:raw_mushashite"
+  },
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:mushashite_ingot"
+  }
+}
