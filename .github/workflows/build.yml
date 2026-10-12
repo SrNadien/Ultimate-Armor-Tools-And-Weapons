@@ -7,6 +7,8 @@ on:
     paths:
       - "src/**/*.java"
       - "gradle.properties"
+      - "CHANGELOG.md"
+      - ".github/workflows/build.yml"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -70,8 +72,8 @@ jobs:
           MOD_VERSION: ${{ steps.gradle_props.outputs.mod_version }}
         run: |
           set -euo pipefail
-          : "${CURSEFORGE_TOKEN:?Add the CURSEFORGE_TOKEN secret to the repository}"
-          : "${CURSEFORGE_PROJECT_ID:?Add the CURSEFORGE_PROJECT_ID variable to the repository}"
+          if [ -z "$CURSEFORGE_TOKEN" ]; then echo "::error::Falta el secret CURSEFORGE_TOKEN en el repositorio"; exit 1; fi
+          if [ -z "$CURSEFORGE_PROJECT_ID" ]; then echo "::error::Falta la variable CURSEFORGE_PROJECT_ID en el repositorio"; exit 1; fi
           MC="1.21.1"
 
           RELEASE_TYPE=release
@@ -99,10 +101,15 @@ jobs:
               gameVersionNames: [$mc, "NeoForge", "Client", "Server"]}')
 
           echo "Uploading $jar to CurseForge as a $RELEASE_TYPE for NeoForge $MC"
-          curl -sS --fail-with-body -X POST \
+          status=$(curl -sS -o response.json -w '%{http_code}' -X POST \
             "https://minecraft.curseforge.com/api/projects/$CURSEFORGE_PROJECT_ID/upload-file" \
             -H "X-Api-Token: $CURSEFORGE_TOKEN" \
-            -F "metadata=$metadata" -F "file=@$jar"
+            -F "metadata=$metadata" -F "file=@$jar")
+          cat response.json
           echo
+          if [ "$status" -lt 200 ] || [ "$status" -ge 300 ]; then
+            echo "::error::CurseForge respondio HTTP $status: $(tr -d '\n' < response.json)"
+            exit 1
+          fi
           git tag "$tag"
           git push origin "$tag"
