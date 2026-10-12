@@ -22,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Stream;
 
 public class ModItemTags {
 
@@ -116,7 +117,8 @@ public class ModItemTags {
                 this.tag(Items.compat(compat)).addOptional(ResourceLocation.parse(compat));
             }
 
-            for (HammerAdds.Hammer hammer : HammerAdds.HAMMERS) {
+            for (HammerAdds.Hammer hammer : Stream.concat(
+                    HammerAdds.HAMMERS.stream(), HammerAdds.THAUMATURGE_HAMMERS.stream()).toList()) {
                 this.tag(Items.HAMMERS).addOptional(
                         ResourceLocation.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID,
                                 HammerAdds.name(hammer.material(), false)));

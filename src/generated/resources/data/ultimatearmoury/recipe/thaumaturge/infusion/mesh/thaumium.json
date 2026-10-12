@@ -1,0 +1,76 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": {
+    "item": "ultimatearmoury:brass_mesh"
+  },
+  "components": [
+    {
+      "tag": "c:ingots/thaumium"
+    },
+    {
+      "tag": "c:strings"
+    },
+    {
+      "tag": "c:ingots/thaumium"
+    },
+    {
+      "tag": "c:strings"
+    },
+    {
+      "tag": "c:ingots/thaumium"
+    },
+    {
+      "tag": "c:strings"
+    },
+    {
+      "tag": "c:ingots/thaumium"
+    },
+    {
+      "tag": "c:strings"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "ultimatearmoury:thaumic_meshes"
+  },
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:thaumium_mesh"
+  }
+}

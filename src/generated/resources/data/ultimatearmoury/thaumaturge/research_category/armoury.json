@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "background": "thaumaturge:textures/gui/gui_research_back_4.png",
+  "formula": [
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "icon": "ultimatearmoury:textures/item/void_metal_mesh.png",
+  "index": 7,
+  "overlay_background": "thaumaturge:textures/gui/gui_research_back_over.png",
+  "required_research": "thaumaturge:unlock_infusion"
+}

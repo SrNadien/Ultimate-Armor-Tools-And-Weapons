@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "category": "ultimatearmoury:armoury",
+  "column": 0,
+  "complexity": 2,
+  "icons": [
+    "ultimatearmoury:void_metal_mesh"
+  ],
+  "name": "research.ultimatearmoury.thaumic_meshes.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "parents": [
+    "thaumaturge:metallurgy@3",
+    "thaumaturge:infusion"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:infusion"
+        }
+      ],
+      "text": "research.ultimatearmoury.thaumic_meshes.stage_0"
+    },
+    {
+      "recipes": [
+        "ultimatearmoury:thaumaturge/arcane/mesh/brass",
+        "ultimatearmoury:thaumaturge/infusion/mesh/thaumium",
+        "ultimatearmoury:thaumaturge/infusion/mesh/void_metal"
+      ],
+      "text": "research.ultimatearmoury.thaumic_meshes.stage_1"
+    }
+  ]
+}

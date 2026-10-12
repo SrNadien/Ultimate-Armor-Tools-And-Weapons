@@ -11,6 +11,7 @@ import nadiendev.ultimatearmoury.datagen.providers.ModRecipeProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModWorldGenProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModBlockTags;
 import nadiendev.ultimatearmoury.datagen.providers.ModItemTags;
+import nadiendev.ultimatearmoury.datagen.providers.ThaumaturgeCompatProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -53,6 +54,7 @@ public class DataGenerators {
                         List.of(new ModAdvancementProvider())));
         generator.addProvider(event.includeServer(), new ModLootModifierProvider(output, lookupProvider));
         generator.addProvider(event.includeServer(), new ExDeorumCompatProvider(output));
+        generator.addProvider(event.includeServer(), new ThaumaturgeCompatProvider(output));
 
         ModBlockTags.Provider blockTagsProvider = generator.addProvider(
                 event.includeServer(),

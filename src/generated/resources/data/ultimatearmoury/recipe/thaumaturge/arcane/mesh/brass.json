@@ -1,0 +1,75 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:aer"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:aqua"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:perditio"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "key": {
+    "#": {
+      "tag": "c:ingots/brass"
+    },
+    "P": {
+      "item": "ultimatearmoury:unobtainium_mesh"
+    },
+    "S": {
+      "tag": "c:strings"
+    }
+  },
+  "pattern": [
+    "S#S",
+    "#P#",
+    "S#S"
+  ],
+  "research": {
+    "entry": "ultimatearmoury:thaumic_meshes"
+  },
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:brass_mesh"
+  },
+  "vis": 100
+}

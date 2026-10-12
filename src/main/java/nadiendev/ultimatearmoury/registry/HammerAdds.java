@@ -43,6 +43,12 @@ public class HammerAdds {
             new Hammer("unobtainium", "c:ingots/unobtainium", true, () -> ModToolTiers.of(ModTier.NADIENITE), "vibranium", null, true)
     );
 
+    public static final List<Hammer> THAUMATURGE_HAMMERS = List.of(
+            new Hammer("brass", "c:ingots/brass", true, () -> ModToolTiers.of(ModTier.NADIENITE), "unobtainium", null, false),
+            new Hammer("thaumium", "c:ingots/thaumium", true, () -> ModToolTiers.of(ModTier.NADIENITE), "brass", null, false),
+            new Hammer("void_metal", "c:ingots/void_metal", true, () -> ModToolTiers.of(ModTier.NADIENITE), "thaumium", null, false)
+    );
+
     public static boolean isExternal(String previousMaterial) {
         return previousMaterial != null && previousMaterial.indexOf(':') >= 0;
     }
@@ -54,6 +60,10 @@ public class HammerAdds {
 
     static {
         for (Hammer hammer : HAMMERS) {
+            register(name(hammer.material(), false), hammer.tier(), hammer.unbreakable());
+            register(name(hammer.material(), true), hammer.tier(), hammer.unbreakable());
+        }
+        for (Hammer hammer : THAUMATURGE_HAMMERS) {
             register(name(hammer.material(), false), hammer.tier(), hammer.unbreakable());
             register(name(hammer.material(), true), hammer.tier(), hammer.unbreakable());
         }

@@ -21,7 +21,8 @@ public class MeshAdds {
 
     public static final List<String> MESH_NAMES = List.of(
             "steel_mesh", "mushashite_mesh", "joanfoite_mesh", "nadienite_mesh",
-            "allthemodium_mesh", "vibranium_mesh", "unobtainium_mesh");
+            "allthemodium_mesh", "vibranium_mesh", "unobtainium_mesh",
+            "brass_mesh", "thaumium_mesh", "void_metal_mesh");
 
     public static final DeferredHolder<Item, Item> STEEL_MESH = mesh("steel_mesh", Rarity.COMMON);
     public static final DeferredHolder<Item, Item> MUSHASHITE_MESH = mesh("mushashite_mesh", Rarity.RARE);
@@ -30,6 +31,9 @@ public class MeshAdds {
     public static final DeferredHolder<Item, Item> ALLTHEMODIUM_MESH = mesh("allthemodium_mesh", Rarity.EPIC);
     public static final DeferredHolder<Item, Item> VIBRANIUM_MESH = mesh("vibranium_mesh", Rarity.EPIC);
     public static final DeferredHolder<Item, Item> UNOBTAINIUM_MESH = mesh("unobtainium_mesh", Rarity.EPIC);
+    public static final DeferredHolder<Item, Item> BRASS_MESH = mesh("brass_mesh", Rarity.EPIC);
+    public static final DeferredHolder<Item, Item> THAUMIUM_MESH = mesh("thaumium_mesh", Rarity.EPIC);
+    public static final DeferredHolder<Item, Item> VOID_METAL_MESH = mesh("void_metal_mesh", Rarity.EPIC);
 
     private static DeferredHolder<Item, Item> mesh(String name, Rarity rarity) {
         DeferredHolder<Item, Item> holder = MESH_ITEMS.register(name,

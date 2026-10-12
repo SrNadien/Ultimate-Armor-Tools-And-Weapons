@@ -12,7 +12,7 @@ Standalone: it needs none of the other Ultimate mods.
 * GeckoLib
 * Patchouli
 
-Optional: JEI, Jade, Ex Deorum, AllTheModium.
+Optional: JEI, Jade, Ex Deorum, AllTheModium, Thaumaturge.
 
 ## Branches
 

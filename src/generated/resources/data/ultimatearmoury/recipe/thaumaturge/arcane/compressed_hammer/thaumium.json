@@ -1,0 +1,69 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:aer"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:aqua"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:perditio"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "key": {
+    "#": {
+      "item": "ultimatearmoury:thaumium_hammer"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "research": {
+    "entry": "ultimatearmoury:thaumic_hammers"
+  },
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:compressed_thaumium_hammer"
+  },
+  "vis": 100
+}
