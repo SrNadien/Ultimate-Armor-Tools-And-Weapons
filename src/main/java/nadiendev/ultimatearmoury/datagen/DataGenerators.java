@@ -10,6 +10,7 @@ import nadiendev.ultimatearmoury.datagen.providers.ModLootTableProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModModelProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModRecipeProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModWorldGenProvider;
+import nadiendev.ultimatearmoury.datagen.providers.ThaumaturgeCompatProvider;
 import net.minecraft.data.advancements.AdvancementProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
@@ -34,6 +35,7 @@ public class DataGenerators {
                 new AdvancementProvider(output, lookupProvider, List.of(new ModAdvancementProvider())));
         event.createProvider(ModLootModifierProvider::new);
         event.createProvider(ExDeorumCompatProvider::new);
+        event.createProvider(ThaumaturgeCompatProvider::new);
         event.createProvider(ModBlockTags.Provider::new);
         event.createProvider(ModItemTags.Provider::new);
 

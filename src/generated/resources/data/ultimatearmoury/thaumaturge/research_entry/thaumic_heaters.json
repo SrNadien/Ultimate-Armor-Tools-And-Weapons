@@ -1,0 +1,64 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "category": "ultimatearmoury:armoury",
+  "column": -3,
+  "complexity": 2,
+  "icons": [
+    "thaumaturge:metal_void"
+  ],
+  "name": "research.ultimatearmoury.thaumic_heaters.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:alkimia"
+    }
+  ],
+  "parents": [
+    "ultimatearmoury:thaumic_meshes"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:infusion"
+        }
+      ],
+      "text": "research.ultimatearmoury.thaumic_heaters.stage_0"
+    },
+    {
+      "text": "research.ultimatearmoury.thaumic_heaters.stage_1"
+    }
+  ]
+}

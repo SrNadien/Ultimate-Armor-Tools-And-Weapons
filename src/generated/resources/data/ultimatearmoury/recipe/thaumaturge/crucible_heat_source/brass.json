@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    }
+  ],
+  "type": "exdeorum:crucible_heat_source",
+  "block_predicate": {
+    "block": "thaumaturge:metal_brass"
+  },
+  "heat_value": 5
+}

@@ -27,6 +27,18 @@
     {
       "id": "ultimatearmoury:unobtainium_mesh",
       "required": false
+    },
+    {
+      "id": "ultimatearmoury:brass_mesh",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:thaumium_mesh",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:void_metal_mesh",
+      "required": false
     }
   ]
 }

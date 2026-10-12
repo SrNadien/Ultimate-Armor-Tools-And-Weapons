@@ -30,6 +30,7 @@ public record ConfigCondition(String option) implements ICondition {
     public static final String EX_DEORUM = "exDeorum";
     public static final String ALLTHEMODIUM = "allTheModium";
     public static final String ALLTHECOMPRESSED = "allTheCompressed";
+    public static final String THAUMATURGE = "thaumaturge";
 
     @Override
     public boolean test(IContext context) {
@@ -37,6 +38,7 @@ public record ConfigCondition(String option) implements ICondition {
             case EX_DEORUM -> ModConfigs.exDeorumEnabled();
             case ALLTHEMODIUM -> ModConfigs.allTheModiumEnabled();
             case ALLTHECOMPRESSED -> ModConfigs.allTheCompressedEnabled();
+            case THAUMATURGE -> ModConfigs.thaumaturgeEnabled();
             default -> true;
         };
     }

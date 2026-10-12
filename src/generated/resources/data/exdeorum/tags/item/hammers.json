@@ -27,6 +27,18 @@
     {
       "id": "ultimatearmoury:unobtainium_hammer",
       "required": false
+    },
+    {
+      "id": "ultimatearmoury:brass_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:thaumium_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:void_metal_hammer",
+      "required": false
     }
   ]
 }

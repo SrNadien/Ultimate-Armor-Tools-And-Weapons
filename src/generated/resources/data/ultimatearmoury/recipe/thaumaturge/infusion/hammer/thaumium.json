@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": "ultimatearmoury:brass_hammer",
+  "components": [
+    "#c:ingots/thaumium",
+    "#c:ingots/thaumium",
+    "#c:rods/wooden"
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "ultimatearmoury:thaumic_hammers"
+  },
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:thaumium_hammer"
+  }
+}

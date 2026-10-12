@@ -9,6 +9,7 @@ public class ModConfigs {
     public static final ModConfigSpec.BooleanValue EX_DEORUM;
     public static final ModConfigSpec.BooleanValue ALLTHEMODIUM;
     public static final ModConfigSpec.BooleanValue ALLTHECOMPRESSED;
+    public static final ModConfigSpec.BooleanValue THAUMATURGE;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -31,6 +32,12 @@ public class ModConfigs {
                 .comment("Versiones comprimidas 1x a 9x de los bloques del mod.")
                 .define("allTheCompressed", true);
 
+        THAUMATURGE = builder
+                .comment("Mallas y martillos de laton, thaumium y metal del vacio de Thaumaturge,",
+                         "con su propia categoria en el Thaumonomicon y fuentes de calor para el crisol de Ex Deorum.",
+                         "Necesita que la integracion de Ex Deorum tambien este activa.")
+                .define("thaumaturge", true);
+
         builder.pop();
 
         SPEC = builder.build();
@@ -49,5 +56,9 @@ public class ModConfigs {
 
     public static boolean allTheCompressedEnabled() {
         return SPEC.isLoaded() && ALLTHECOMPRESSED.get();
+    }
+
+    public static boolean thaumaturgeEnabled() {
+        return exDeorumEnabled() && SPEC.isLoaded() && THAUMATURGE.get();
     }
 }

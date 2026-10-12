@@ -27,6 +27,18 @@
     {
       "id": "ultimatearmoury:compressed_unobtainium_hammer",
       "required": false
+    },
+    {
+      "id": "ultimatearmoury:compressed_brass_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:compressed_thaumium_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:compressed_void_metal_hammer",
+      "required": false
     }
   ]
 }

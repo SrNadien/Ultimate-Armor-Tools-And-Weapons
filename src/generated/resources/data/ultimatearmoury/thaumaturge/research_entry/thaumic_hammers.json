@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "exdeorum"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheModium"
+    }
+  ],
+  "category": "ultimatearmoury:armoury",
+  "column": 3,
+  "complexity": 2,
+  "icons": [
+    "ultimatearmoury:void_metal_hammer"
+  ],
+  "name": "research.ultimatearmoury.thaumic_hammers.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:perditio"
+    }
+  ],
+  "parents": [
+    "ultimatearmoury:thaumic_meshes"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:infusion"
+        }
+      ],
+      "text": "research.ultimatearmoury.thaumic_hammers.stage_0"
+    },
+    {
+      "recipes": [
+        "ultimatearmoury:thaumaturge/arcane/hammer/brass",
+        "ultimatearmoury:thaumaturge/arcane/compressed_hammer/brass",
+        "ultimatearmoury:thaumaturge/infusion/hammer/thaumium",
+        "ultimatearmoury:thaumaturge/arcane/compressed_hammer/thaumium",
+        "ultimatearmoury:thaumaturge/infusion/hammer/void_metal",
+        "ultimatearmoury:thaumaturge/arcane/compressed_hammer/void_metal"
+      ],
+      "text": "research.ultimatearmoury.thaumic_hammers.stage_1"
+    }
+  ]
+}
