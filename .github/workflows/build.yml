@@ -75,6 +75,7 @@ jobs:
           if [ -z "$CURSEFORGE_TOKEN" ]; then echo "::error::Falta el secret CURSEFORGE_TOKEN en el repositorio"; exit 1; fi
           if [ -z "$CURSEFORGE_PROJECT_ID" ]; then echo "::error::Falta la variable CURSEFORGE_PROJECT_ID en el repositorio"; exit 1; fi
           MC="1.21.1"
+          JAVA_NAME="Java 21"
 
           RELEASE_TYPE=release
           if [[ "$COMMIT_MESSAGE" =~ \[curseforge\ (alpha|beta|release)\] ]]; then RELEASE_TYPE="${BASH_REMATCH[1]}"; fi
@@ -92,13 +93,20 @@ jobs:
 
           jar=$(ls build/libs/*.jar | grep -v -- '-sources' | head -n1)
 
+          VERSIONS=$(curl -sS -H "X-Api-Token: $CURSEFORGE_TOKEN" "https://minecraft.curseforge.com/api/game/versions" || true)
+          if echo "$VERSIONS" | jq -e --arg j "$JAVA_NAME" 'any(.[]; .name == $j)' > /dev/null 2>&1; then
+            GAME_VERSIONS=$(jq -nc --arg mc "$MC" --arg j "$JAVA_NAME" '[$mc, "NeoForge", "Client", "Server", $j]')
+          else
+            echo "::warning::CurseForge no conoce la version '$JAVA_NAME', se sube sin ella"
+            GAME_VERSIONS=$(jq -nc --arg mc "$MC" '[$mc, "NeoForge", "Client", "Server"]')
+          fi
           metadata=$(jq -nc \
             --arg changelog "$CHANGELOG" \
             --arg type "$RELEASE_TYPE" \
             --arg name "UltimateArmoury-$MC-$MOD_VERSION-NeoForge" \
-            --arg mc "$MC" \
+            --argjson versions "$GAME_VERSIONS" \
             '{changelog: $changelog, changelogType: "markdown", releaseType: $type, displayName: $name,
-              gameVersionNames: [$mc, "NeoForge", "Client", "Server"]}')
+              gameVersionNames: $versions}')
 
           echo "Uploading $jar to CurseForge as a $RELEASE_TYPE for NeoForge $MC"
           status=$(curl -sS -o response.json -w '%{http_code}' -X POST \
