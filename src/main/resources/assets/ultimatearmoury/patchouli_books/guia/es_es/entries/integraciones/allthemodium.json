@@ -2,6 +2,7 @@
   "name": "AllTheModium",
   "icon": "ultimatearmoury:allthemodium_mesh",
   "category": "ultimatearmoury:integraciones",
+  "flag": "mod:exdeorum",
   "sortnum": 1,
   "pages": [
     { "type": "patchouli:text", "text": "Si ademas de Ex Deorum tenes AllTheModium, se agregan tres mallas mas que continuan la cadena por encima de la de Nadienite." },

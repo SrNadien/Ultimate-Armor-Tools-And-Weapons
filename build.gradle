@@ -143,6 +143,7 @@ dependencies {
 
 
     //Ex Deorum
+    compileOnly "maven.modrinth:ex-deorum:${exdeorum_version}"
     runtimeOnly "maven.modrinth:ex-deorum:${exdeorum_version}"
 
     // ModKit (rama 26.1, requerido por el datagen de Ex Deorum)

@@ -90,7 +90,9 @@ public class HammerAdds {
     }
 
     public static void register(IEventBus eventBus) {
-        HAMMER_ITEMS.register(eventBus);
+        if (MeshAdds.enabled()) {
+            HAMMER_ITEMS.register(eventBus);
+        }
     }
 
     private HammerAdds() {

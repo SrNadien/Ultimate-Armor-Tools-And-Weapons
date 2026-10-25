@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.13] — 2026-10-25 — Minecraft 26.1.2
+
+### 🐛 Fixed
+- The meshes are now Ex Deorum mesh items, so the Ex Machinis: Divitiae Deorum sieve accepts them. They can also be enchanted with Efficiency and Fortune.
+
+### 🔧 Changed
+- Without Ex Deorum installed, the meshes and hammers are no longer registered and the Ex Deorum and AllTheModium guide entries are hidden.
+
 ## [2.0.12] — 2026-10-25 — Minecraft 26.1.2
 
 ### ✨ Added
