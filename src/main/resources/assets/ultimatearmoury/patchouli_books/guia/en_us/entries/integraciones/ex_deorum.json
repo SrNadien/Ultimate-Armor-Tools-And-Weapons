@@ -2,6 +2,7 @@
   "name": "Ex Deorum",
   "icon": "ultimatearmoury:nadienite_mesh",
   "category": "ultimatearmoury:integraciones",
+  "flag": "mod:exdeorum",
   "sortnum": 0,
   "pages": [
     { "type": "patchouli:text", "text": "With Ex Deorum installed the mod adds seven sieve meshes, so you can get the materials without mining a single ore. Made for skyblock." },

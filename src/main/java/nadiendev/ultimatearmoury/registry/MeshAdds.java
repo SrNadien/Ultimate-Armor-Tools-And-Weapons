@@ -1,11 +1,13 @@
 package nadiendev.ultimatearmoury.registry;
 
 import nadiendev.ultimatearmoury.UltimateArmouryCore;
+import nadiendev.ultimatearmoury.integration.exdeorum.ExDeorumMeshes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
+import net.neoforged.neoforge.data.loading.DatagenModLoader;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -36,8 +38,10 @@ public class MeshAdds {
     public static final DeferredHolder<Item, Item> VOID_METAL_MESH = mesh("void_metal_mesh", Rarity.EPIC);
 
     private static DeferredHolder<Item, Item> mesh(String name, Rarity rarity) {
-        DeferredHolder<Item, Item> holder = MESH_ITEMS.register(name,
-                () -> new Item(new Item.Properties().stacksTo(1).rarity(rarity)));
+        DeferredHolder<Item, Item> holder = MESH_ITEMS.register(name, () -> {
+            Item.Properties properties = new Item.Properties().stacksTo(1).rarity(rarity);
+            return sieveModPresent() ? ExDeorumMeshes.create(properties) : new Item(properties);
+        });
         ALL.add(holder);
         return holder;
     }
@@ -50,7 +54,13 @@ public class MeshAdds {
         return ModList.get().isLoaded("exdeorum");
     }
 
+    public static boolean enabled() {
+        return sieveModPresent() || DatagenModLoader.isRunningDataGen();
+    }
+
     public static void register(IEventBus eventBus) {
-        MESH_ITEMS.register(eventBus);
+        if (enabled()) {
+            MESH_ITEMS.register(eventBus);
+        }
     }
 }

@@ -2,6 +2,7 @@
   "name": "Ex Deorum",
   "icon": "ultimatearmoury:nadienite_mesh",
   "category": "ultimatearmoury:integraciones",
+  "flag": "mod:exdeorum",
   "sortnum": 0,
   "pages": [
     { "type": "patchouli:text", "text": "Con Ex Deorum instalado el mod agrega siete mallas de tamiz, pensadas para poder conseguir los materiales sin picar una sola mena. Sirve para skyblock." },

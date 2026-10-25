@@ -130,6 +130,8 @@ dependencies {
     //Patchouli
     implementation "vazkii.patchouli:Patchouli:${patchouli_version}"
 
+    compileOnly "maven.modrinth:ex-deorum:${exdeorum_version}"
+
     // Ex Deorum y AllTheModium van como jars en run/mods, no aca:
     // Ex Deorum corre su propio datagen y necesita ModKit, que no publica esas clases,
     // asi que en el classpath del datagen rompe runData.

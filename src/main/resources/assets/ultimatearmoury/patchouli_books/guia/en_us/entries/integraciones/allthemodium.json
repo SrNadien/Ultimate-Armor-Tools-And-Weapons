@@ -2,6 +2,7 @@
   "name": "AllTheModium",
   "icon": "ultimatearmoury:allthemodium_mesh",
   "category": "ultimatearmoury:integraciones",
+  "flag": "mod:exdeorum",
   "sortnum": 1,
   "pages": [
     { "type": "patchouli:text", "text": "If you have AllTheModium on top of Ex Deorum, three more meshes are added that continue the chain above the Nadienite one." },
