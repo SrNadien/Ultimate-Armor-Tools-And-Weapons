@@ -59,6 +59,12 @@ public class ModItemTags {
         public static final TagKey<Item> COMPRESSED_HAMMERS =
                 ItemTags.create(Identifier.fromNamespaceAndPath("exdeorum", "compressed_hammers"));
 
+        public static final TagKey<Item> HAMMER_FORTUNE_BLACKLIST =
+                ItemTags.create(Identifier.fromNamespaceAndPath("exdeorum", "hammer_fortune_blacklist"));
+
+        public static final TagKey<Item> COMPRESSED_HAMMER_FORTUNE_BLACKLIST =
+                ItemTags.create(Identifier.fromNamespaceAndPath("exdeorum", "compressed_hammer_fortune_blacklist"));
+
         public static final TagKey<Item> SIEVE_MESHES =
                 ItemTags.create(Identifier.fromNamespaceAndPath("exdeorum", "sieve_meshes"));
 
@@ -120,6 +126,12 @@ public class ModItemTags {
                         Identifier.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID,
                                 HammerAdds.name(hammer.material(), false))));
                 this.tag(Items.COMPRESSED_HAMMERS).add(TagEntry.optionalElement(
+                        Identifier.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID,
+                                HammerAdds.name(hammer.material(), true))));
+                this.tag(Items.HAMMER_FORTUNE_BLACKLIST).add(TagEntry.optionalElement(
+                        Identifier.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID,
+                                HammerAdds.name(hammer.material(), false))));
+                this.tag(Items.COMPRESSED_HAMMER_FORTUNE_BLACKLIST).add(TagEntry.optionalElement(
                         Identifier.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID,
                                 HammerAdds.name(hammer.material(), true))));
             }

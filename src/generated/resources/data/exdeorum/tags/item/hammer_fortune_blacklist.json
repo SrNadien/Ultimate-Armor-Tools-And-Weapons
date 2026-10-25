@@ -1,0 +1,44 @@
+{
+  "values": [
+    {
+      "id": "ultimatearmoury:steel_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:mushashite_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:joanfoite_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:nadienite_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:allthemodium_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:vibranium_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:unobtainium_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:brass_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:thaumium_hammer",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:void_metal_hammer",
+      "required": false
+    }
+  ]
+}

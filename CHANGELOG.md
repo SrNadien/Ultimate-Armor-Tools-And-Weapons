@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.12] — 2026-10-25 — Minecraft 26.1.2
+
+### ✨ Added
+- All UltimateArmoury hammers and compressed hammers are now in Ex Deorum's `hammer_fortune_blacklist` and `compressed_hammer_fortune_blacklist` item tags.
+
 ## [2.0.11] — 2026-10-12 — Minecraft 26.1.2
 
 ### ✨ Added
