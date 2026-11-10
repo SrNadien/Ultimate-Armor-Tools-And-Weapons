@@ -31,6 +31,9 @@ public record ConfigCondition(String option) implements ICondition {
     public static final String ALLTHEMODIUM = "allTheModium";
     public static final String ALLTHECOMPRESSED = "allTheCompressed";
     public static final String THAUMATURGE = "thaumaturge";
+    public static final String FTB_UNEARTHED = "ftbUnearthed";
+    public static final String FTB_UNEARTHED_ALLTHEMODIUM = "ftbUnearthedAllTheModium";
+    public static final String FTB_UNEARTHED_THAUMATURGE = "ftbUnearthedThaumaturge";
 
     @Override
     public boolean test(IContext context) {
@@ -39,6 +42,9 @@ public record ConfigCondition(String option) implements ICondition {
             case ALLTHEMODIUM -> ModConfigs.allTheModiumEnabled();
             case ALLTHECOMPRESSED -> ModConfigs.allTheCompressedEnabled();
             case THAUMATURGE -> ModConfigs.thaumaturgeEnabled();
+            case FTB_UNEARTHED -> ModConfigs.ftbUnearthedEnabled();
+            case FTB_UNEARTHED_ALLTHEMODIUM -> ModConfigs.ftbUnearthedAllTheModiumEnabled();
+            case FTB_UNEARTHED_THAUMATURGE -> ModConfigs.ftbUnearthedThaumaturgeEnabled();
             default -> true;
         };
     }

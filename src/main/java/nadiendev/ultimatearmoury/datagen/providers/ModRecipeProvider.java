@@ -6,6 +6,7 @@ import nadiendev.ultimatearmoury.registry.ItemsAdds;
 import nadiendev.ultimatearmoury.registry.MeshAdds;
 import nadiendev.ultimatearmoury.items.ModTier;
 import nadiendev.ultimatearmoury.registry.BlocksAdds;
+import nadiendev.ultimatearmoury.registry.BrushAdds;
 import nadiendev.ultimatearmoury.registry.CompressedBlocks;
 import nadiendev.ultimatearmoury.registry.HammerAdds;
 import nadiendev.ultimatearmoury.registry.ArmorAdds;
@@ -71,6 +72,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
         buildTierChain(recipeOutput);
         buildMeshRecipes(recipeOutput);
+        buildBrushRecipes(recipeOutput);
         buildCompressedRecipes(recipeOutput);
         buildHammerRecipes(recipeOutput);
 
@@ -235,6 +237,49 @@ public class ModRecipeProvider extends RecipeProvider {
 
         builder.unlockedBy("has_string", has(Tags.Items.STRINGS))
                 .save(out, rl(BuiltInRegistries.ITEM.getKey(result.asItem()).getPath()));
+    }
+
+    private void buildBrushRecipes(RecipeOutput out) {
+        RecipeOutput base = out.withConditions(
+                new ModLoadedCondition("ftbunearthed"),
+                new ConfigCondition(ConfigCondition.FTB_UNEARTHED));
+
+        RecipeOutput withAtm = out.withConditions(
+                new ModLoadedCondition("ftbunearthed"),
+                new ConfigCondition(ConfigCondition.FTB_UNEARTHED),
+                new ModLoadedCondition("allthemodium"),
+                new ConfigCondition(ConfigCondition.FTB_UNEARTHED_ALLTHEMODIUM));
+
+        for (BrushAdds.Brush brush : BrushAdds.bySource(BrushAdds.Source.VANILLA)) {
+            brush(base, brush);
+        }
+        for (BrushAdds.Brush brush : BrushAdds.bySource(BrushAdds.Source.BASE)) {
+            brush(base, brush);
+        }
+        for (BrushAdds.Brush brush : BrushAdds.bySource(BrushAdds.Source.ALLTHEMODIUM)) {
+            brush(withAtm, brush);
+        }
+    }
+
+    private void brush(RecipeOutput out, BrushAdds.Brush brush) {
+        Item result = BrushAdds.of(brush.material()).get();
+        TagKey<Item> ingots = ItemTags.create(ResourceLocation.parse(brush.ingotTag()));
+        ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, result, 1)
+                .define('F', Tags.Items.FEATHERS)
+                .define('#', ingots)
+                .define('S', Tags.Items.RODS_WOODEN);
+
+        if (brush.hasPrevious()) {
+            Ingredient previous = BrushAdds.VANILLA_BRUSH.equals(brush.previous())
+                    ? Ingredient.of(Items.BRUSH)
+                    : Ingredient.of(BrushAdds.of(brush.previous()).get());
+            builder.define('P', previous).pattern(" F ").pattern("#P#").pattern(" S ");
+        } else {
+            builder.pattern("F").pattern("#").pattern("S");
+        }
+
+        builder.unlockedBy("has_feather", has(Tags.Items.FEATHERS))
+                .save(out, rl(brush.itemName()));
     }
 
     private void buildTierChain(RecipeOutput out) {

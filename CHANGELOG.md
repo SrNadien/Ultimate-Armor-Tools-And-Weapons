@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.14] — 2026-11-10 — Minecraft 1.21.1
+
+### ✨ Added
+- FTB Unearthed integration, optional. Fifteen brushes that work like the vanilla brush and join the `c:tools/brush` tag, so the Unearther accepts them: wooden, iron, golden, diamond and netherite, then steel, mushashite, joanfoite and nadienite, then allthemodium, vibranium and unobtainium, then alchemical brass, thaumium and void metal. The vanilla brush is the copper one.
+- Allthemodium, vibranium, unobtainium and void metal brushes never wear out. The others wear out from 32 uses (wooden) up to 4096 (thaumium).
+- Crafting chain: each brush is made with its ingot, a feather and a stick around the brush of the tier below, starting from the vanilla brush. The wooden brush is made from planks, a feather and a stick.
+- Unearther recipes for every brush on gravel, sand, deepslate and netherrack. Better brushes drop more and work faster. The brass, thaumium and void metal brushes give amber from gravel and sand and raw cinnabar from deepslate and netherrack, with 30%, 65% and 100%.
+- The brass brush is made at the Thaumaturge arcane workbench and the thaumium and void metal brushes in the infusion altar, with a new Thaumic Brushes page in the UltimateArmoury category of the Thaumonomicon.
+- Three options in the config file, under `integraciones`: `ftbUnearthed`, `ftbUnearthedAllTheModium` and `ftbUnearthedThaumaturge`.
+
+### 🔧 Changed
+- The UltimateArmoury category of the Thaumonomicon now also appears with Thaumaturge, Allthemodium and FTB Unearthed installed, without Ex Deorum.
+
 ## [2.0.13] — 2026-10-25 — Minecraft 1.21.1
 
 ### 🐛 Fixed

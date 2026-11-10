@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthed"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "tag": "c:ingots/netherite"
+    },
+    "F": {
+      "tag": "c:feathers"
+    },
+    "P": {
+      "item": "ultimatearmoury:diamond_brush"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    " F ",
+    "#P#",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:netherite_brush"
+  }
+}

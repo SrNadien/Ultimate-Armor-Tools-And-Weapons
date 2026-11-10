@@ -1,0 +1,64 @@
+{
+  "values": [
+    {
+      "id": "ultimatearmoury:wooden_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:iron_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:golden_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:diamond_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:netherite_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:steel_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:mushashite_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:joanfoite_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:nadienite_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:allthemodium_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:vibranium_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:unobtainium_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:brass_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:thaumium_brush",
+      "required": false
+    },
+    {
+      "id": "ultimatearmoury:void_metal_brush",
+      "required": false
+    }
+  ]
+}

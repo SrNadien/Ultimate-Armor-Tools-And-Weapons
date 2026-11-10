@@ -7,6 +7,7 @@ import nadiendev.ultimatearmoury.datagen.DataGenerators;
 import nadiendev.ultimatearmoury.registry.ArmorAdds;
 
 import nadiendev.ultimatearmoury.registry.BlocksAdds;
+import nadiendev.ultimatearmoury.registry.BrushAdds;
 import nadiendev.ultimatearmoury.registry.CompressedBlocks;
 import nadiendev.ultimatearmoury.registry.CreativeTab;
 import nadiendev.ultimatearmoury.registry.FluidsRegistry;
@@ -51,6 +52,7 @@ public class UltimateArmouryCore {
         LootModifiersRegister.register(modEventBus);
         MeshAdds.register(modEventBus);
         HammerAdds.register(modEventBus);
+        BrushAdds.register(modEventBus);
         CompressedBlocks.register(modEventBus);
 
         CreativeTab.register(modEventBus);

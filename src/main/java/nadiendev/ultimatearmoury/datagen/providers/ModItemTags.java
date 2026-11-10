@@ -2,6 +2,7 @@ package nadiendev.ultimatearmoury.datagen.providers;
 
 import nadiendev.ultimatearmoury.UltimateArmouryCore;
 import nadiendev.ultimatearmoury.registry.BlocksAdds;
+import nadiendev.ultimatearmoury.registry.BrushAdds;
 
 import nadiendev.ultimatearmoury.registry.ModOreBlocks;
 import nadiendev.ultimatearmoury.registry.ItemsAdds;
@@ -69,6 +70,8 @@ public class ModItemTags {
         public static final TagKey<Item> SIEVE_MESHES =
                 ItemTags.create(ResourceLocation.fromNamespaceAndPath("exdeorum", "sieve_meshes"));
 
+        public static final TagKey<Item> BRUSHES = commonTag("tools/brush");
+
         public static final TagKey<Item> ORES_MUSHASHITE = commonTag("ores/mushashite");
         public static final TagKey<Item> ORES_JOANFOITE = commonTag("ores/joanfoite");
         public static final TagKey<Item> ORES_NADIENITE = commonTag("ores/nadienite");
@@ -117,6 +120,11 @@ public class ModItemTags {
             for (String mesh : MeshAdds.MESH_NAMES) {
                 this.tag(Items.SIEVE_MESHES)
                     .addOptional(ResourceLocation.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID, mesh));
+            }
+
+            for (BrushAdds.Brush brush : BrushAdds.BRUSHES) {
+                this.tag(Items.BRUSHES)
+                    .addOptional(ResourceLocation.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID, brush.itemName()));
             }
 
             for (String compat : COMPAT_ITEMS) {

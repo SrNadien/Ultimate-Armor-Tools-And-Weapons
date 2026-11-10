@@ -1,24 +1,63 @@
 {
   "neoforge:conditions": [
     {
-      "type": "neoforge:mod_loaded",
-      "modid": "thaumaturge"
-    },
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "exdeorum"
-    },
-    {
-      "type": "ultimatearmoury:config",
-      "option": "thaumaturge"
-    },
-    {
-      "type": "neoforge:mod_loaded",
-      "modid": "allthemodium"
-    },
-    {
-      "type": "ultimatearmoury:config",
-      "option": "allTheModium"
+      "type": "neoforge:or",
+      "values": [
+        {
+          "type": "neoforge:and",
+          "values": [
+            {
+              "type": "neoforge:mod_loaded",
+              "modid": "thaumaturge"
+            },
+            {
+              "type": "neoforge:mod_loaded",
+              "modid": "exdeorum"
+            },
+            {
+              "type": "ultimatearmoury:config",
+              "option": "thaumaturge"
+            },
+            {
+              "type": "neoforge:mod_loaded",
+              "modid": "allthemodium"
+            },
+            {
+              "type": "ultimatearmoury:config",
+              "option": "allTheModium"
+            }
+          ]
+        },
+        {
+          "type": "neoforge:and",
+          "values": [
+            {
+              "type": "neoforge:mod_loaded",
+              "modid": "thaumaturge"
+            },
+            {
+              "type": "neoforge:mod_loaded",
+              "modid": "ftbunearthed"
+            },
+            {
+              "type": "neoforge:mod_loaded",
+              "modid": "allthemodium"
+            },
+            {
+              "type": "ultimatearmoury:config",
+              "option": "ftbUnearthed"
+            },
+            {
+              "type": "ultimatearmoury:config",
+              "option": "ftbUnearthedAllTheModium"
+            },
+            {
+              "type": "ultimatearmoury:config",
+              "option": "ftbUnearthedThaumaturge"
+            }
+          ]
+        }
+      ]
     }
   ],
   "background": "thaumaturge:textures/gui/gui_research_back_4.png",

@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthed"
+    }
+  ],
+  "type": "ftbunearthed:unearther",
+  "damage_chance": 0.25,
+  "input_block": "minecraft:sand",
+  "output_items": [
+    {
+      "chance": 0.05,
+      "item": {
+        "count": 1,
+        "id": "minecraft:diamond"
+      }
+    },
+    {
+      "chance": 0.03,
+      "item": {
+        "count": 1,
+        "id": "minecraft:emerald"
+      }
+    },
+    {
+      "chance": 0.02,
+      "item": {
+        "count": 1,
+        "id": "minecraft:ancient_debris"
+      }
+    }
+  ],
+  "processing_time": 200,
+  "tool_item": {
+    "item": "ultimatearmoury:netherite_brush"
+  },
+  "worker": {
+    "profession": "minecraft:mason"
+  }
+}

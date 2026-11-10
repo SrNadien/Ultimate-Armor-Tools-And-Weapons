@@ -6,12 +6,15 @@ import com.google.gson.JsonObject;
 import com.mojang.serialization.JsonOps;
 import nadiendev.ultimatearmoury.UltimateArmouryCore;
 import nadiendev.ultimatearmoury.config.ConfigCondition;
+import nadiendev.ultimatearmoury.registry.BrushAdds;
 import nadiendev.ultimatearmoury.registry.HammerAdds;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
+import net.neoforged.neoforge.common.conditions.AndCondition;
 import net.neoforged.neoforge.common.conditions.ICondition;
 import net.neoforged.neoforge.common.conditions.ModLoadedCondition;
+import net.neoforged.neoforge.common.conditions.OrCondition;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -25,10 +28,12 @@ public class ThaumaturgeCompatProvider implements DataProvider {
     private static final String THAUMATURGE = "thaumaturge";
     private static final String EXDEORUM = "exdeorum";
     private static final String ALLTHEMODIUM = "allthemodium";
+    private static final String FTBUNEARTHED = "ftbunearthed";
 
     private static final String CATEGORY = MOD + ":armoury";
     private static final String ENTRY_MESHES = MOD + ":thaumic_meshes";
     private static final String ENTRY_HAMMERS = MOD + ":thaumic_hammers";
+    private static final String ENTRY_BRUSHES = MOD + ":thaumic_brushes";
 
     private static final int ARCANE_VIS = 100;
     private static final int ARCANE_CRYSTALS = 64;
@@ -133,6 +138,23 @@ public class ThaumaturgeCompatProvider implements DataProvider {
                         new String[][]{{"ignis", "4"}, {"metallum", "3"}, {"alkimia", "2"}}, 2),
                 entryPath(root, "thaumic_heaters")));
 
+        List<BrushAdds.Brush> brushes = BrushAdds.bySource(BrushAdds.Source.THAUMATURGE);
+        List<String> brushRecipes = new ArrayList<>();
+        for (int i = 0; i < brushes.size(); i++) {
+            BrushAdds.Brush brush = brushes.get(i);
+            String where = i < ARCANE_TIERS ? "arcane" : "infusion";
+            String brushRecipeId = "thaumaturge/" + where + "/brush/" + brush.material();
+            JsonObject recipe = i < ARCANE_TIERS ? arcaneBrush(brush) : infusedBrush(brush, i);
+            tasks.add(DataProvider.saveStable(cache, recipe, recipePath(root, brushRecipeId)));
+            brushRecipes.add(MOD + ":" + brushRecipeId);
+        }
+
+        tasks.add(DataProvider.saveStable(cache,
+                entry(brushConditions(), "thaumic_brushes", List.of("thaumaturge:metallurgy@3", "thaumaturge:infusion"),
+                        0, 3, MOD + ":void_metal_brush", brushRecipes,
+                        new String[][]{{"instrumentum", "4"}, {"metallum", "3"}, {"terra", "2"}}, 2),
+                entryPath(root, "thaumic_brushes")));
+
         return CompletableFuture.allOf(tasks.toArray(CompletableFuture[]::new));
     }
 
@@ -163,8 +185,36 @@ public class ThaumaturgeCompatProvider implements DataProvider {
             list.add(new ConfigCondition(ConfigCondition.ALLTHEMODIUM));
         }
 
+        return encode(list);
+    }
+
+    private static JsonElement encode(List<ICondition> list) {
         return ICondition.LIST_CODEC.encodeStart(JsonOps.INSTANCE, list)
                 .getOrThrow(message -> new IllegalStateException("No se pudieron serializar las condiciones: " + message));
+    }
+
+    private static List<ICondition> brushConditionList() {
+        return List.of(
+                new ModLoadedCondition(THAUMATURGE),
+                new ModLoadedCondition(FTBUNEARTHED),
+                new ModLoadedCondition(ALLTHEMODIUM),
+                new ConfigCondition(ConfigCondition.FTB_UNEARTHED),
+                new ConfigCondition(ConfigCondition.FTB_UNEARTHED_ALLTHEMODIUM),
+                new ConfigCondition(ConfigCondition.FTB_UNEARTHED_THAUMATURGE));
+    }
+
+    private static JsonElement brushConditions() {
+        return encode(brushConditionList());
+    }
+
+    private static JsonElement categoryConditions() {
+        List<ICondition> meshes = List.of(
+                new ModLoadedCondition(THAUMATURGE),
+                new ModLoadedCondition(EXDEORUM),
+                new ConfigCondition(ConfigCondition.THAUMATURGE),
+                new ModLoadedCondition(ALLTHEMODIUM),
+                new ConfigCondition(ConfigCondition.ALLTHEMODIUM));
+        return encode(List.of(new OrCondition(List.of(new AndCondition(meshes), new AndCondition(brushConditionList())))));
     }
 
     private static JsonObject itemIngredient(String id) {
@@ -251,11 +301,16 @@ public class ThaumaturgeCompatProvider implements DataProvider {
     }
 
     private static JsonObject arcaneShaped(String entry, String resultId, List<String> pattern, JsonObject key) {
+        return arcaneShaped(conditions(true), entry, resultId, pattern, key);
+    }
+
+    private static JsonObject arcaneShaped(JsonElement conditions, String entry, String resultId,
+                                           List<String> pattern, JsonObject key) {
         JsonArray rows = new JsonArray();
         pattern.forEach(rows::add);
 
         JsonObject json = new JsonObject();
-        json.add("neoforge:conditions", conditions(true));
+        json.add("neoforge:conditions", conditions);
         json.addProperty("type", "thaumaturge:arcane_workbench_shaped");
         json.add("crystals", crystals());
         json.add("key", key);
@@ -308,11 +363,16 @@ public class ThaumaturgeCompatProvider implements DataProvider {
 
     private static JsonObject infusion(String entry, JsonObject catalyst, List<JsonObject> components,
                                        String resultId, int index) {
+        return infusion(conditions(true), entry, catalyst, components, resultId, index);
+    }
+
+    private static JsonObject infusion(JsonElement conditions, String entry, JsonObject catalyst,
+                                       List<JsonObject> components, String resultId, int index) {
         JsonArray list = new JsonArray();
         components.forEach(list::add);
 
         JsonObject json = new JsonObject();
-        json.add("neoforge:conditions", conditions(true));
+        json.add("neoforge:conditions", conditions);
         json.addProperty("type", "thaumaturge:infusion");
         json.add("aspects", infusionAspects(index));
         json.add("catalyst", catalyst);
@@ -345,6 +405,36 @@ public class ThaumaturgeCompatProvider implements DataProvider {
                 hammerId(tier.material(), false), index);
     }
 
+    private static String brushId(String material) {
+        return MOD + ":" + material + "_brush";
+    }
+
+    private static String previousBrushId(BrushAdds.Brush brush) {
+        return brushId(brush.previous());
+    }
+
+    private static JsonObject arcaneBrush(BrushAdds.Brush brush) {
+        JsonObject key = new JsonObject();
+        key.add("F", tagIngredient("c:feathers"));
+        key.add("#", tagIngredient(brush.ingotTag()));
+        key.add("P", itemIngredient(previousBrushId(brush)));
+        key.add("S", tagIngredient("c:rods/wooden"));
+
+        return arcaneShaped(brushConditions(), ENTRY_BRUSHES, brushId(brush.material()),
+                List.of(" F ", "#P#", " S "), key);
+    }
+
+    private static JsonObject infusedBrush(BrushAdds.Brush brush, int index) {
+        List<JsonObject> components = new ArrayList<>();
+        components.add(tagIngredient(brush.ingotTag()));
+        components.add(tagIngredient(brush.ingotTag()));
+        components.add(tagIngredient("c:feathers"));
+        components.add(tagIngredient("c:rods/wooden"));
+
+        return infusion(brushConditions(), ENTRY_BRUSHES, itemIngredient(previousBrushId(brush)), components,
+                brushId(brush.material()), index);
+    }
+
     private static JsonObject category() {
         String[][] formula = {{"metallum", "10"}, {"instrumentum", "10"}, {"potentia", "5"},
                 {"praecantatio", "5"}, {"terra", "5"}};
@@ -357,7 +447,7 @@ public class ThaumaturgeCompatProvider implements DataProvider {
         }
 
         JsonObject json = new JsonObject();
-        json.add("neoforge:conditions", conditions(true));
+        json.add("neoforge:conditions", categoryConditions());
         json.addProperty("background", "thaumaturge:textures/gui/gui_research_back_4.png");
         json.add("formula", aspects);
         json.addProperty("icon", MOD + ":textures/item/void_metal_mesh.png");
@@ -369,6 +459,11 @@ public class ThaumaturgeCompatProvider implements DataProvider {
 
     private static JsonObject entry(String name, List<String> parents, int column, int row, String icon,
                                     List<String> recipes, String[][] noteAspects, int complexity) {
+        return entry(conditions(true), name, parents, column, row, icon, recipes, noteAspects, complexity);
+    }
+
+    private static JsonObject entry(JsonElement conditions, String name, List<String> parents, int column, int row,
+                                    String icon, List<String> recipes, String[][] noteAspects, int complexity) {
         JsonArray parentArray = new JsonArray();
         parents.forEach(parentArray::add);
 
@@ -407,7 +502,7 @@ public class ThaumaturgeCompatProvider implements DataProvider {
         }
 
         JsonObject json = new JsonObject();
-        json.add("neoforge:conditions", conditions(true));
+        json.add("neoforge:conditions", conditions);
         json.addProperty("category", CATEGORY);
         json.addProperty("name", "research." + MOD + "." + name + ".title");
         json.add("parents", parentArray);

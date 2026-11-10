@@ -1,0 +1,60 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthedAllTheModium"
+    }
+  ],
+  "type": "ftbunearthed:unearther",
+  "damage_chance": 0.25,
+  "input_block": "minecraft:netherrack",
+  "output_items": [
+    {
+      "chance": 0.16,
+      "item": {
+        "count": 1,
+        "id": "ultimatearmoury:raw_nadienite"
+      }
+    },
+    {
+      "chance": 0.14,
+      "item": {
+        "count": 1,
+        "id": "allthemodium:raw_allthemodium"
+      }
+    },
+    {
+      "chance": 0.1,
+      "item": {
+        "count": 1,
+        "id": "allthemodium:raw_vibranium"
+      }
+    },
+    {
+      "chance": 0.06,
+      "item": {
+        "count": 1,
+        "id": "allthemodium:raw_unobtainium"
+      }
+    }
+  ],
+  "processing_time": 88,
+  "tool_item": {
+    "item": "ultimatearmoury:unobtainium_brush"
+  },
+  "worker": {
+    "profession": "minecraft:mason"
+  }
+}

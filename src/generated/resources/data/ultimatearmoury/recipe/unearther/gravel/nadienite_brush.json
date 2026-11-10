@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthed"
+    }
+  ],
+  "type": "ftbunearthed:unearther",
+  "damage_chance": 0.25,
+  "input_block": "minecraft:gravel",
+  "output_items": [
+    {
+      "chance": 0.2,
+      "item": {
+        "count": 1,
+        "id": "ultimatearmoury:raw_mushashite"
+      }
+    },
+    {
+      "chance": 0.14,
+      "item": {
+        "count": 1,
+        "id": "ultimatearmoury:raw_joanfoite"
+      }
+    },
+    {
+      "chance": 0.08,
+      "item": {
+        "count": 1,
+        "id": "ultimatearmoury:raw_nadienite"
+      }
+    },
+    {
+      "chance": 0.04,
+      "item": {
+        "count": 1,
+        "id": "minecraft:ancient_debris"
+      }
+    }
+  ],
+  "processing_time": 136,
+  "tool_item": {
+    "item": "ultimatearmoury:nadienite_brush"
+  },
+  "worker": {
+    "profession": "minecraft:mason"
+  }
+}

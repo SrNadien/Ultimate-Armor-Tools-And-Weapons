@@ -90,6 +90,10 @@ public class CreativeTab {
                             HammerAdds.all().forEach(hammer -> output.accept(hammer.get()));
                         }
 
+                        if (BrushAdds.unearthedPresent()) {
+                            BrushAdds.all().forEach(brush -> output.accept(brush.get()));
+                        }
+
                         CompressedBlocks.all().forEach(block -> output.accept(block.get()));
 
                         output.accept(ItemsAdds.NADIENITE_FLUID_BUCKET.get());

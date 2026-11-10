@@ -1,0 +1,74 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthed"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthedAllTheModium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthedThaumaturge"
+    }
+  ],
+  "category": "ultimatearmoury:armoury",
+  "column": 0,
+  "complexity": 2,
+  "icons": [
+    "ultimatearmoury:void_metal_brush"
+  ],
+  "name": "research.ultimatearmoury.thaumic_brushes.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "parents": [
+    "thaumaturge:metallurgy@3",
+    "thaumaturge:infusion"
+  ],
+  "row": 3,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:infusion"
+        }
+      ],
+      "text": "research.ultimatearmoury.thaumic_brushes.stage_0"
+    },
+    {
+      "recipes": [
+        "ultimatearmoury:thaumaturge/arcane/brush/brass",
+        "ultimatearmoury:thaumaturge/infusion/brush/thaumium",
+        "ultimatearmoury:thaumaturge/infusion/brush/void_metal"
+      ],
+      "text": "research.ultimatearmoury.thaumic_brushes.stage_1"
+    }
+  ]
+}

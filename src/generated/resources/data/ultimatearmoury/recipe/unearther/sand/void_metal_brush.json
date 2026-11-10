@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthed"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "allthemodium"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthedAllTheModium"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "thaumaturge"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthedThaumaturge"
+    }
+  ],
+  "type": "ftbunearthed:unearther",
+  "damage_chance": 0.25,
+  "input_block": "minecraft:sand",
+  "output_items": [
+    {
+      "chance": 1.0,
+      "item": {
+        "count": 1,
+        "id": "thaumaturge:amber"
+      }
+    }
+  ],
+  "processing_time": 40,
+  "tool_item": {
+    "item": "ultimatearmoury:void_metal_brush"
+  },
+  "worker": {
+    "profession": "minecraft:mason"
+  }
+}

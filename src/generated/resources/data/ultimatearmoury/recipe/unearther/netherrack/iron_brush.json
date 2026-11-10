@@ -1,0 +1,45 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "ultimatearmoury:config",
+      "option": "ftbUnearthed"
+    }
+  ],
+  "type": "ftbunearthed:unearther",
+  "damage_chance": 0.25,
+  "input_block": "minecraft:netherrack",
+  "output_items": [
+    {
+      "chance": 0.2,
+      "item": {
+        "count": 1,
+        "id": "minecraft:raw_copper"
+      }
+    },
+    {
+      "chance": 0.12,
+      "item": {
+        "count": 1,
+        "id": "minecraft:raw_iron"
+      }
+    },
+    {
+      "chance": 0.04,
+      "item": {
+        "count": 1,
+        "id": "minecraft:raw_gold"
+      }
+    }
+  ],
+  "processing_time": 248,
+  "tool_item": {
+    "item": "ultimatearmoury:iron_brush"
+  },
+  "worker": {
+    "profession": "minecraft:mason"
+  }
+}
