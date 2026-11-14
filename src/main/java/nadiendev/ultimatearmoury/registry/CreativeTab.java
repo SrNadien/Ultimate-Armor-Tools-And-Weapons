@@ -18,7 +18,7 @@ public class CreativeTab {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ULTIMATE_ARMOURY_TAB =
             CREATIVE_MODE_TABS.register("ultimate_armoury_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.ultimatearmoury"))
-                    .icon(() -> new ItemStack(ToolsAdds.CHANCLA.get()))
+                    .icon(() -> new ItemStack(ItemsAdds.CORAZON_DE_LA_ELITE.get()))
                     .displayItems((parameters, output) -> {
                         output.accept(ItemsAdds.RAW_MUSHASHITE.get());
                         output.accept(ItemsAdds.MUSHASHITE_INGOT.get());
@@ -89,6 +89,9 @@ public class CreativeTab {
                             MeshAdds.all().forEach(mesh -> output.accept(mesh.get()));
                             HammerAdds.all().forEach(hammer -> output.accept(hammer.get()));
                         }
+
+                        MaterialAdds.items().forEach(item -> output.accept(item.get()));
+                        MaterialAdds.blocks().forEach(block -> output.accept(block.get()));
 
                         CompressedBlocks.all().forEach(block -> output.accept(block.get()));
 

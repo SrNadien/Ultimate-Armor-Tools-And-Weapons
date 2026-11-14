@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": "ultimatearmoury:umbrite_ingot"
+  },
+  "pattern": [
+    "a"
+  ],
+  "result": {
+    "id": "ultimatearmoury:umbrite_dust"
+  }
+}

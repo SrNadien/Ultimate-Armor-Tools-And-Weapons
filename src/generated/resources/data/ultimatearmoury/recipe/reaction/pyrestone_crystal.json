@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "actuallyadditions"
+    }
+  ],
+  "type": "mekanism:reaction",
+  "chemical_input": {
+    "amount": 100,
+    "chemical": "mekanism:fissile_fuel"
+  },
+  "chemical_output": {
+    "amount": 100,
+    "id": "mekanism:nuclear_waste"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 10,
+    "fluid": "mekanism:steam"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "actuallyadditions:empowered_restonia_crystal"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "ultimatearmoury:pyrestone_crystal"
+  }
+}

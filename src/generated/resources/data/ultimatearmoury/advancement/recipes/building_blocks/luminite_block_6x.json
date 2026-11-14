@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_luminite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:luminite_block_5x"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:luminite_block_6x"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_luminite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:luminite_block_6x"
+    ]
+  }
+}

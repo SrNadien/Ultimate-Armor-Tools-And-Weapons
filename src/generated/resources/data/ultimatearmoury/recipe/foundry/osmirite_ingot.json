@@ -1,0 +1,36 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ],
+  "type": "oritech:foundry",
+  "ingredients": [
+    {
+      "item": "mekanism:ingot_osmium"
+    },
+    {
+      "item": "alltheores:iridium_ingot"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultimatearmoury:osmirite_ingot"
+    }
+  ],
+  "time": 80
+}

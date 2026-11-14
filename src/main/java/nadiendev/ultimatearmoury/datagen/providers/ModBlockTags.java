@@ -2,6 +2,8 @@ package nadiendev.ultimatearmoury.datagen.providers;
 
 import nadiendev.ultimatearmoury.UltimateArmouryCore;
 import nadiendev.ultimatearmoury.registry.BlocksAdds;
+import nadiendev.ultimatearmoury.registry.CompressedBlocks;
+import nadiendev.ultimatearmoury.registry.MaterialAdds;
 import nadiendev.ultimatearmoury.registry.ModOreBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -33,6 +35,10 @@ public class ModBlockTags {
         public static final TagKey<Block> STORAGE_BLOCKS_JOANFOITE = commonTag("storage_blocks/joanfoite");
         public static final TagKey<Block> STORAGE_BLOCKS_NADIENITE = commonTag("storage_blocks/nadienite");
         public static final TagKey<Block> STORAGE_BLOCKS_STEEL = commonTag("storage_blocks/steel");
+
+        public static TagKey<Block> storageBlocks(String name) {
+            return commonTag("storage_blocks/" + name);
+        }
 
         private static TagKey<Block> commonTag(String name) {
             return BlockTags.create(Identifier.fromNamespaceAndPath("c", name));
@@ -89,6 +95,26 @@ public class ModBlockTags {
 
             this.tag(Blocks.STORAGE_BLOCKS_STEEL)
                 .add(BlocksAdds.STEEL_BLOCK.get());
+
+            for (var holder : MaterialAdds.blocks()) {
+                this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(holder.get());
+                this.tag(BlockTags.NEEDS_IRON_TOOL).add(holder.get());
+            }
+
+            for (MaterialAdds.Metal metal : MaterialAdds.METALS) {
+                this.tag(Blocks.storageBlocks(metal.name())).add(MaterialAdds.block(metal.block()).get());
+            }
+            this.tag(Blocks.storageBlocks("viridite")).add(MaterialAdds.block(MaterialAdds.LAPIS_BLOCK).get());
+
+            List<String> compressedMaterials = new ArrayList<>();
+            MaterialAdds.METALS.forEach(metal -> compressedMaterials.add(metal.name()));
+            compressedMaterials.add("viridite");
+            for (String material : compressedMaterials) {
+                for (var holder : CompressedBlocks.levels(material)) {
+                    this.tag(BlockTags.MINEABLE_WITH_PICKAXE).add(holder.get());
+                    this.tag(BlockTags.NEEDS_IRON_TOOL).add(holder.get());
+                }
+            }
         }
     }
 }

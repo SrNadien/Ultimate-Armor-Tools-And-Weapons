@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "excessive_utilities"
+    }
+  ],
+  "type": "oritech:foundry",
+  "ingredients": [
+    {
+      "item": "excessive_utilities:lunar_reactive_dust"
+    },
+    {
+      "item": "excessive_utilities:demon_ingot"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultimatearmoury:infernium_ingot"
+    }
+  ],
+  "time": 80
+}

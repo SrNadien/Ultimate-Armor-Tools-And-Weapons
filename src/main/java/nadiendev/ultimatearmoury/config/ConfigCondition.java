@@ -31,6 +31,7 @@ public record ConfigCondition(String option) implements ICondition {
     public static final String ALLTHEMODIUM = "allTheModium";
     public static final String ALLTHECOMPRESSED = "allTheCompressed";
     public static final String THAUMATURGE = "thaumaturge";
+    public static final String MATERIALS = "materials";
 
     @Override
     public boolean test(IContext context) {
@@ -39,6 +40,7 @@ public record ConfigCondition(String option) implements ICondition {
             case ALLTHEMODIUM -> ModConfigs.allTheModiumEnabled();
             case ALLTHECOMPRESSED -> ModConfigs.allTheCompressedEnabled();
             case THAUMATURGE -> ModConfigs.thaumaturgeEnabled();
+            case MATERIALS -> ModConfigs.materialsEnabled();
             default -> true;
         };
     }

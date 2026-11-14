@@ -2,6 +2,7 @@ package nadiendev.ultimatearmoury.datagen;
 
 import nadiendev.ultimatearmoury.UltimateArmouryCore;
 import nadiendev.ultimatearmoury.datagen.providers.ExDeorumCompatProvider;
+import nadiendev.ultimatearmoury.datagen.providers.MaterialRecipeProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModAdvancementProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModBlockTags;
 import nadiendev.ultimatearmoury.datagen.providers.ModItemTags;
@@ -36,6 +37,7 @@ public class DataGenerators {
         event.createProvider(ModLootModifierProvider::new);
         event.createProvider(ExDeorumCompatProvider::new);
         event.createProvider(ThaumaturgeCompatProvider::new);
+        event.createProvider(MaterialRecipeProvider::new);
         event.createProvider(ModBlockTags.Provider::new);
         event.createProvider(ModItemTags.Provider::new);
 

@@ -4,6 +4,7 @@ import nadiendev.ultimatearmoury.items.ModTier;
 import nadiendev.ultimatearmoury.registry.BlocksAdds;
 import nadiendev.ultimatearmoury.registry.CompressedBlocks;
 import nadiendev.ultimatearmoury.registry.ItemsAdds;
+import nadiendev.ultimatearmoury.registry.MaterialAdds;
 import nadiendev.ultimatearmoury.registry.ModOreBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -34,6 +35,8 @@ public class UltimateArmouryBlockLootTables extends BlockLootSubProvider {
             dropSelf(compressed.get());
         }
 
+        MaterialAdds.blocks().forEach(block -> dropSelf(block.get()));
+
         for (ModTier tier : ModTier.values()) {
             add(ModOreBlocks.stoneOreOf(tier).get(),
                     block -> createOreDrop(block, ItemsAdds.rawOreOf(tier).get()));
@@ -54,6 +57,7 @@ public class UltimateArmouryBlockLootTables extends BlockLootSubProvider {
                 BlocksAdds.NETHER_STAR_BLOCK.get()
         ));
         CompressedBlocks.all().forEach(holder -> blocks.add(holder.get()));
+        MaterialAdds.blocks().forEach(holder -> blocks.add(holder.get()));
         blocks.addAll(ModOreBlocks.allOres());
         return blocks;
     }

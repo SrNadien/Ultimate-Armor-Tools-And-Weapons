@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:umbrite_block_1x"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_umbrite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:umbrite_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_umbrite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:umbrite_block_1x"
+    ]
+  }
+}

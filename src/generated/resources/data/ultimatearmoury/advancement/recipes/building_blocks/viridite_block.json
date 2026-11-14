@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:viridite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_viridite_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:viridite_gem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_viridite_gem"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:viridite_block"
+    ]
+  }
+}

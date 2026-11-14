@@ -4,6 +4,7 @@ import nadiendev.ultimatearmoury.UltimateArmouryCore;
 import nadiendev.ultimatearmoury.registry.BlocksAdds;
 import nadiendev.ultimatearmoury.registry.CompressedBlocks;
 import nadiendev.ultimatearmoury.registry.ItemsAdds;
+import nadiendev.ultimatearmoury.registry.MaterialAdds;
 import nadiendev.ultimatearmoury.registry.ModOreBlocks;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -44,14 +45,17 @@ public class ModModelProvider extends ModelProvider {
         for (DeferredHolder<Block, Block> compressed : CompressedBlocks.all()) {
             blocks.add(compressed.get());
         }
+        MaterialAdds.blocks().forEach(holder -> blocks.add(holder.get()));
         return blocks;
     }
 
     private static List<Item> generatedItems() {
-        return List.of(
+        List<Item> items = new ArrayList<>(List.of(
                 ItemsAdds.NADIENITE_NUGGET.get(),
                 ItemsAdds.NETHERITE_DAGGER.get()
-        );
+        ));
+        MaterialAdds.items().forEach(holder -> items.add(holder.get()));
+        return items;
     }
 
     @Override
@@ -62,6 +66,8 @@ public class ModModelProvider extends ModelProvider {
 
         itemModels.generateFlatItem(ItemsAdds.NADIENITE_NUGGET.get(), ModelTemplates.FLAT_ITEM);
         itemModels.generateFlatItem(ItemsAdds.NETHERITE_DAGGER.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+
+        MaterialAdds.items().forEach(holder -> itemModels.generateFlatItem(holder.get(), ModelTemplates.FLAT_ITEM));
     }
 
     @Override

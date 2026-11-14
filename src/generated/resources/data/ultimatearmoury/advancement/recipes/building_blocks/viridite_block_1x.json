@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ultimatearmoury:viridite_block_1x"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_viridite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ultimatearmoury:viridite_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_viridite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ultimatearmoury:viridite_block_1x"
+    ]
+  }
+}
