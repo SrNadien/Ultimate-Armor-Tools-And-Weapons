@@ -5,6 +5,7 @@ import nadiendev.ultimatearmoury.datagen.providers.BlockModelProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ExDeorumCompatProvider;
 import nadiendev.ultimatearmoury.datagen.providers.FtbUnearthedCompatProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ItemsModelProvider;
+import nadiendev.ultimatearmoury.datagen.providers.MaterialRecipeProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModAdvancementProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModLootModifierProvider;
 import nadiendev.ultimatearmoury.datagen.providers.ModLootTableProvider;
@@ -56,6 +57,7 @@ public class DataGenerators {
         generator.addProvider(event.includeServer(), new ModLootModifierProvider(output, lookupProvider));
         generator.addProvider(event.includeServer(), new ExDeorumCompatProvider(output));
         generator.addProvider(event.includeServer(), new ThaumaturgeCompatProvider(output));
+        generator.addProvider(event.includeServer(), new MaterialRecipeProvider(output));
         generator.addProvider(event.includeServer(), new FtbUnearthedCompatProvider(output));
 
         ModBlockTags.Provider blockTagsProvider = generator.addProvider(

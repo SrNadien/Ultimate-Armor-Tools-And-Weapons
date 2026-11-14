@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "ultimatearmoury:block/umbrite_block_1x"
+  }
+}

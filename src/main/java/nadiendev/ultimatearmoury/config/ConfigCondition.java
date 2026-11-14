@@ -34,6 +34,7 @@ public record ConfigCondition(String option) implements ICondition {
     public static final String FTB_UNEARTHED = "ftbUnearthed";
     public static final String FTB_UNEARTHED_ALLTHEMODIUM = "ftbUnearthedAllTheModium";
     public static final String FTB_UNEARTHED_THAUMATURGE = "ftbUnearthedThaumaturge";
+    public static final String MATERIALS = "materials";
 
     @Override
     public boolean test(IContext context) {
@@ -45,6 +46,7 @@ public record ConfigCondition(String option) implements ICondition {
             case FTB_UNEARTHED -> ModConfigs.ftbUnearthedEnabled();
             case FTB_UNEARTHED_ALLTHEMODIUM -> ModConfigs.ftbUnearthedAllTheModiumEnabled();
             case FTB_UNEARTHED_THAUMATURGE -> ModConfigs.ftbUnearthedThaumaturgeEnabled();
+            case MATERIALS -> ModConfigs.materialsEnabled();
             default -> true;
         };
     }

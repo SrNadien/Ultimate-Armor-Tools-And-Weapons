@@ -9,6 +9,7 @@ import nadiendev.ultimatearmoury.registry.BlocksAdds;
 import nadiendev.ultimatearmoury.registry.BrushAdds;
 import nadiendev.ultimatearmoury.registry.CompressedBlocks;
 import nadiendev.ultimatearmoury.registry.HammerAdds;
+import nadiendev.ultimatearmoury.registry.MaterialAdds;
 import nadiendev.ultimatearmoury.registry.ArmorAdds;
 import nadiendev.ultimatearmoury.registry.ToolsAdds;
 import nadiendev.ultimatearmoury.registry.ModOreBlocks;
@@ -75,6 +76,7 @@ public class ModRecipeProvider extends RecipeProvider {
         buildBrushRecipes(recipeOutput);
         buildCompressedRecipes(recipeOutput);
         buildHammerRecipes(recipeOutput);
+        buildMaterialCraftingRecipes(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, BlocksAdds.ENDER_PEARL_BLOCK.get(), 1)
                 .pattern("aaa").pattern("aaa").pattern("aaa")
@@ -113,6 +115,65 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_steel_ingot", has(ItemsAdds.STEEL_INGOT.get()))
                 .save(recipeOutput, rl("bloque_de_acero"));
 
+    }
+
+    private void buildMaterialCraftingRecipes(RecipeOutput out) {
+        RecipeOutput target = out.withConditions(new ConfigCondition(ConfigCondition.MATERIALS));
+
+        for (MaterialAdds.Metal metal : MaterialAdds.METALS) {
+            storageRecipes(target, metal.ingot(), metal.nugget(), metal.block());
+        }
+        storageRecipes(target, MaterialAdds.GEM, null, MaterialAdds.LAPIS_BLOCK);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MaterialAdds.item("umbrite_dust").get(), 1)
+                .pattern("a")
+                .define('a', MaterialAdds.item("umbrite_ingot").get())
+                .unlockedBy("has_umbrite_ingot", has(MaterialAdds.item("umbrite_ingot").get()))
+                .save(target, rl("umbrite_dust"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, MaterialAdds.item("gorium_ingot").get(), 1)
+                .pattern("rbr").pattern("bsb").pattern("rbr")
+                .define('r', Items.ROTTEN_FLESH)
+                .define('b', Items.BONE)
+                .define('s', ModItemTags.Items.INGOTS_STEEL)
+                .unlockedBy("has_steel_ingot", has(ItemsAdds.STEEL_INGOT.get()))
+                .save(out.withConditions(new ConfigCondition(ConfigCondition.MATERIALS),
+                        new ModLoadedCondition("mob_grinding_utils")), rl("gorium_ingot"));
+    }
+
+    private void storageRecipes(RecipeOutput out, String ingot, String nugget, String block) {
+        ItemLike ingotItem = MaterialAdds.item(ingot).get();
+        ItemLike blockItem = MaterialAdds.block(block).get();
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, blockItem, 1)
+                .pattern("aaa").pattern("aaa").pattern("aaa")
+                .define('a', ingotItem)
+                .unlockedBy("has_" + ingot, has(ingotItem))
+                .save(out, rl(block));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotItem, 9)
+                .pattern("a")
+                .define('a', blockItem)
+                .unlockedBy("has_" + block, has(blockItem))
+                .save(out, rl(ingot + "_from_block"));
+
+        if (nugget == null) {
+            return;
+        }
+
+        ItemLike nuggetItem = MaterialAdds.item(nugget).get();
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, nuggetItem, 9)
+                .pattern("a")
+                .define('a', ingotItem)
+                .unlockedBy("has_" + ingot, has(ingotItem))
+                .save(out, rl(nugget + "_from_ingot"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ingotItem, 1)
+                .pattern("aaa").pattern("aaa").pattern("aaa")
+                .define('a', nuggetItem)
+                .unlockedBy("has_" + nugget, has(nuggetItem))
+                .save(out, rl(ingot + "_from_nuggets"));
     }
 
     private void buildHammerRecipes(RecipeOutput out) {
@@ -196,8 +257,9 @@ public class ModRecipeProvider extends RecipeProvider {
                         .unlockedBy("has_" + material, has(source))
                         .save(compressed, rl(name));
 
-                ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, source, 9)
-                        .requires(result)
+                ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, source, 9)
+                        .pattern("a")
+                        .define('a', result)
                         .unlockedBy("has_" + name, has(result))
                         .save(compressed, rl(name + "_uncompress"));
             }

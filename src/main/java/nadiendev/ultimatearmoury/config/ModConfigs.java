@@ -13,6 +13,7 @@ public class ModConfigs {
     public static final ModConfigSpec.BooleanValue FTB_UNEARTHED;
     public static final ModConfigSpec.BooleanValue FTB_UNEARTHED_ALLTHEMODIUM;
     public static final ModConfigSpec.BooleanValue FTB_UNEARTHED_THAUMATURGE;
+    public static final ModConfigSpec.BooleanValue MATERIALS;
 
     static {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
@@ -59,6 +60,16 @@ public class ModConfigs {
 
         builder.pop();
 
+        builder.comment("Materiales del modpack: lingotes, pepitas, bloques, polvos y gemas propios.",
+                        "Poner en false desactiva solo sus recetas; los items siguen existiendo.")
+               .push("materiales");
+
+        MATERIALS = builder
+                .comment("Recetas de los materiales (alloy smelter de Ender IO y crafteo).")
+                .define("enabled", true);
+
+        builder.pop();
+
         SPEC = builder.build();
     }
 
@@ -71,6 +82,10 @@ public class ModConfigs {
 
     public static boolean allTheModiumEnabled() {
         return exDeorumEnabled() && SPEC.isLoaded() && ALLTHEMODIUM.get();
+    }
+
+    public static boolean materialsEnabled() {
+        return SPEC.isLoaded() && MATERIALS.get();
     }
 
     public static boolean allTheCompressedEnabled() {

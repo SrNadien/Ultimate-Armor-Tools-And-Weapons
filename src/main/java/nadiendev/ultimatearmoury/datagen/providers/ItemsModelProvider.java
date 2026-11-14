@@ -2,6 +2,7 @@ package nadiendev.ultimatearmoury.datagen.providers;
 
 import nadiendev.ultimatearmoury.UltimateArmouryCore;
 import nadiendev.ultimatearmoury.registry.BrushAdds;
+import nadiendev.ultimatearmoury.registry.MaterialAdds;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -26,6 +27,8 @@ public class ItemsModelProvider extends ItemModelProvider {
         ).texture("layer0", ResourceLocation.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID, "item/netherite_dagger"));
 
         basicItem(nadiendev.ultimatearmoury.registry.ItemsAdds.NADIENITE_NUGGET.get());
+
+        MaterialAdds.items().forEach(item -> basicItem(item.get()));
 
         ResourceLocation brushing = ResourceLocation.withDefaultNamespace("brushing");
         for (BrushAdds.Brush brush : BrushAdds.BRUSHES) {

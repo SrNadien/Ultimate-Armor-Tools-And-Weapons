@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "a": {
+      "item": "ultimatearmoury:tenebrite_block_6x"
+    }
+  },
+  "pattern": [
+    "a"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:tenebrite_block_5x"
+  }
+}

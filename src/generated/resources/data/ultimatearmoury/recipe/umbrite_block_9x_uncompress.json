@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "a": {
+      "item": "ultimatearmoury:umbrite_block_9x"
+    }
+  },
+  "pattern": [
+    "a"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:umbrite_block_8x"
+  }
+}

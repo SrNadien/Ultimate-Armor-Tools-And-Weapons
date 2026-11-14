@@ -1,0 +1,32 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kubejs"
+    }
+  ],
+  "type": "oritech:foundry",
+  "ingredients": [
+    {
+      "item": "kubejs:bitumen"
+    },
+    {
+      "item": "kubejs:tar"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultimatearmoury:tenebrite_ingot"
+    }
+  ],
+  "time": 80
+}

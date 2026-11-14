@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "allTheCompressed"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "a": {
+      "item": "ultimatearmoury:ionite_block_2x"
+    }
+  },
+  "pattern": [
+    "a"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:ionite_block_1x"
+  }
+}

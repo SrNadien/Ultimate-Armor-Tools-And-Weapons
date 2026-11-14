@@ -3,6 +3,7 @@ package nadiendev.ultimatearmoury.datagen.providers;
 import nadiendev.ultimatearmoury.UltimateArmouryCore;
 import nadiendev.ultimatearmoury.registry.BlocksAdds;
 import nadiendev.ultimatearmoury.registry.CompressedBlocks;
+import nadiendev.ultimatearmoury.registry.MaterialAdds;
 import nadiendev.ultimatearmoury.registry.ModOreBlocks;
 import nadiendev.ultimatearmoury.registry.FluidsRegistry;
 import net.minecraft.data.PackOutput;
@@ -34,6 +35,8 @@ public class BlockModelProvider extends BlockStateProvider {
         for (var compressed : CompressedBlocks.all()) {
             blockWithItem(compressed);
         }
+
+        MaterialAdds.blocks().forEach(this::blockWithItem);
 
         blockWithItem(ModOreBlocks.MUSHASHITE_ORE);
         blockWithItem(ModOreBlocks.DEEPSLATE_MUSHASHITE_ORE);

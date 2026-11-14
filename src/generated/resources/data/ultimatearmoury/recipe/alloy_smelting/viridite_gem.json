@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ],
+  "type": "enderio:alloy_smelting",
+  "energy": 4800,
+  "experience": 0.3,
+  "inputs": [
+    {
+      "count": 1,
+      "item": "minecraft:lapis_lazuli"
+    },
+    {
+      "count": 1,
+      "item": "ultimatearmoury:luminite_ingot"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "ultimatearmoury:viridite_gem"
+  }
+}

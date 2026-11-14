@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "ultimatearmoury:luminite_block"
+    }
+  },
+  "pattern": [
+    "a"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ultimatearmoury:luminite_ingot"
+  }
+}

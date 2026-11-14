@@ -21,8 +21,7 @@ public class CompressedBlocks {
 
     public static final int MAX_LEVEL = 9;
 
-    public static final List<String> MATERIALS = List.of(
-            "steel", "mushashite", "joanfoite", "nadienite", "nether_star", "ender_pearl");
+    public static final List<String> MATERIALS = materials();
 
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(BuiltInRegistries.BLOCK, UltimateArmouryCore.MOD_ID);
@@ -37,6 +36,14 @@ public class CompressedBlocks {
             }
             BY_MATERIAL.put(material, List.copyOf(levels));
         }
+    }
+
+    private static List<String> materials() {
+        List<String> materials = new ArrayList<>(
+                List.of("steel", "mushashite", "joanfoite", "nadienite", "nether_star", "ender_pearl"));
+        MaterialAdds.METALS.forEach(metal -> materials.add(metal.name()));
+        materials.add("viridite");
+        return List.copyOf(materials);
     }
 
     private static DeferredHolder<Block, Block> register(String material, int level) {
@@ -69,8 +76,18 @@ public class CompressedBlocks {
             case "nadienite" -> BlocksAdds.NADIENITE_BLOCK;
             case "nether_star" -> BlocksAdds.NETHER_STAR_BLOCK;
             case "ender_pearl" -> BlocksAdds.ENDER_PEARL_BLOCK;
-            default -> throw new IllegalArgumentException("material desconocido: " + material);
+            default -> {
+                DeferredHolder<Block, Block> block = MaterialAdds.block(material + "_block");
+                if (block == null) {
+                    throw new IllegalArgumentException("material desconocido: " + material);
+                }
+                yield block;
+            }
         };
+    }
+
+    public static List<DeferredHolder<Block, Block>> levels(String material) {
+        return BY_MATERIAL.get(material);
     }
 
     public static List<DeferredHolder<Block, Block>> all() {

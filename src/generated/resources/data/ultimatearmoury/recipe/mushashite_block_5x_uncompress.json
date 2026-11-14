@@ -5,12 +5,15 @@
       "option": "allTheCompressed"
     }
   ],
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
   "category": "building",
-  "ingredients": [
-    {
+  "key": {
+    "a": {
       "item": "ultimatearmoury:mushashite_block_5x"
     }
+  },
+  "pattern": [
+    "a"
   ],
   "result": {
     "count": 9,

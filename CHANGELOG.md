@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.0.15] — 2026-11-14 — Minecraft 1.21.1
+
+### ✨ Added
+- New materials, each with its own ingot, nugget and block: Amberite, Infernium, Tenebrite, Umbrite, Ionite, Ascendium, Gorium, Luminite and Osmirite. Also Umbrite Dust, Lustrous Dust, the Viridite Gem and its block, the Pyrestone Crystal and the Aurelite Crystal.
+- Compressed versions, from 1x to 9x, of the ten new blocks. They follow the existing `allTheCompressed` option.
+- Recipes in Ender IO's alloy smelter and Oritech's foundry, in the crafting table, and in Mekanism's pressurized reaction chamber for the Pyrestone Crystal. Each one only loads when the mods it needs are installed.
+- A `materiales.enabled` option in the config file to turn all of those recipes off.
+
+### 🔧 Changed
+- The creative tab icon is now the Heart of the Elite.
+- Compressed blocks now turn back into the block below with a single-item crafting recipe.
+
+### 🐛 Fixed
+- The creative tab, the welcome advancement and the guide book said "Ultimate Foods" instead of "Ultimate Armoury".
+
 ## [2.0.14] — 2026-11-10 — Minecraft 1.21.1
 
 ### ✨ Added

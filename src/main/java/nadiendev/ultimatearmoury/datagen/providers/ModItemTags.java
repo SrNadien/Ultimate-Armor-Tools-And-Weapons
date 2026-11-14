@@ -8,6 +8,7 @@ import nadiendev.ultimatearmoury.registry.ModOreBlocks;
 import nadiendev.ultimatearmoury.registry.ItemsAdds;
 import nadiendev.ultimatearmoury.registry.HammerAdds;
 import nadiendev.ultimatearmoury.registry.MeshAdds;
+import nadiendev.ultimatearmoury.registry.MaterialAdds;
 import nadiendev.ultimatearmoury.registry.ArmorAdds;
 import nadiendev.ultimatearmoury.registry.ToolsAdds;
 import net.minecraft.core.HolderLookup;
@@ -89,6 +90,10 @@ public class ModItemTags {
         public static final TagKey<Item> XPBOOST_ENCHANTABLE_AXES       = tag("enchantable/xpboost_axes");
         public static final TagKey<Item> XPBOOST_ENCHANTABLE            = tag("enchantable/xpboost");
 
+        public static TagKey<Item> common(String path) {
+            return commonTag(path);
+        }
+
         private static TagKey<Item> commonTag(String name) {
             return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
         }
@@ -126,6 +131,18 @@ public class ModItemTags {
                 this.tag(Items.BRUSHES)
                     .addOptional(ResourceLocation.fromNamespaceAndPath(UltimateArmouryCore.MOD_ID, brush.itemName()));
             }
+
+            for (MaterialAdds.Metal metal : MaterialAdds.METALS) {
+                this.tag(Items.common("ingots/" + metal.name())).add(MaterialAdds.item(metal.ingot()).get());
+                this.tag(Items.common("nuggets/" + metal.name())).add(MaterialAdds.item(metal.nugget()).get());
+                this.tag(Items.common("storage_blocks/" + metal.name()))
+                        .add(MaterialAdds.block(metal.block()).get().asItem());
+            }
+            this.tag(Items.common("gems/viridite")).add(MaterialAdds.item(MaterialAdds.GEM).get());
+            this.tag(Items.common("storage_blocks/viridite"))
+                    .add(MaterialAdds.block(MaterialAdds.LAPIS_BLOCK).get().asItem());
+            this.tag(Items.common("dusts/umbrite")).add(MaterialAdds.item("umbrite_dust").get());
+            this.tag(Items.common("dusts/osmium")).add(MaterialAdds.item("lustrous_dust").get());
 
             for (String compat : COMPAT_ITEMS) {
                 this.tag(Items.compat(compat)).addOptional(ResourceLocation.parse(compat));

@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "ultimatearmoury:config",
+      "option": "materials"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mob_grinding_utils"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:bone"
+    },
+    "r": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "s": {
+      "tag": "c:ingots/steel"
+    }
+  },
+  "pattern": [
+    "rbr",
+    "bsb",
+    "rbr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ultimatearmoury:gorium_ingot"
+  }
+}
